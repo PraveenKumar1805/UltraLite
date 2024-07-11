@@ -69,38 +69,38 @@ BO_ 261 M_Max_Min_Cell_Voltage: 8 BMS1
  SG_ Max_Cell_Voltage : 0|16@1+ (1,0) [0.0|5000.0] "mV"  TCU
 
 BO_ 262 M_Battery_PDU_Temp_Data: 8 BMS1
- SG_ PDU_Temperature_BMS : 32|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
- SG_ PDU_Temperature_AFE : 0|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ PDU_Temperature_BMS : 16|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ PDU_Temperature_AFE : 0|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
 
 BO_ 263 M_Battery_Temp_Data_1: 8 BMS1
- SG_ Battery_Pack_Effective_Temp : 32|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
- SG_ Balancing_Temperature_AFE : 0|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ Battery_Pack_Effective_Temp : 16|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ Balancing_Temperature_AFE : 0|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
 
 BO_ 264 M_Battery_Temp_Data_2: 8 BMS1
- SG_ Battery_Pack_Temp_Sensor_2 : 32|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
- SG_ Battery_Pack_Temp_Sensor_1 : 0|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ Battery_Pack_Temp_Sensor_2 : 16|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ Battery_Pack_Temp_Sensor_1 : 0|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
 
 BO_ 265 M_Battery_Temp_Data_3: 8 BMS1
- SG_ Battery_Pack_Temp_Sensor_4 : 32|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
- SG_ Battery_Pack_Temp_Sensor_3 : 0|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ Battery_Pack_Temp_Sensor_4 : 16|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ Battery_Pack_Temp_Sensor_3 : 0|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
 
 BO_ 272 M_BMS_Status_Data_1: 8 BMS1
- SG_ Cell16_Balancing_Status  : 34|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell15_Balancing_Status  : 33|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell14_Balancing_Status  : 32|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell13_Balancing_Status  : 31|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell12_Balancing_Status  : 30|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell11_Balancing_Status  : 29|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell10_Balancing_Status  : 28|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell9_Balancing_Status  : 27|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell8_Balancing_Status  : 26|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell7_Balancing_Status  : 25|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell6_Balancing_Status  : 24|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell5_Balancing_Status  : 23|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell4_Balancing_Status  : 22|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell3_Balancing_Status  : 21|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell2_Balancing_Status  : 20|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell1_Balancing_Status  : 19|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell16_Balancing_Status : 34|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell15_Balancing_Status : 33|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell14_Balancing_Status : 32|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell13_Balancing_Status : 31|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell12_Balancing_Status : 30|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell11_Balancing_Status : 29|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell10_Balancing_Status : 28|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell9_Balancing_Status : 27|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell8_Balancing_Status : 26|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell7_Balancing_Status : 25|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell6_Balancing_Status : 24|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell5_Balancing_Status : 23|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell4_Balancing_Status : 22|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell3_Balancing_Status : 21|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell2_Balancing_Status : 20|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell1_Balancing_Status : 19|1@1+ (1,0) [0.0|1.0] ""  TCU
  SG_ BMS_SlowChg_Status : 18|1@1+ (1,0) [0.0|1.0] ""  TCU
  SG_ BMS_SlowChg_Auth : 17|1@1+ (1,0) [0.0|1.0] ""  TCU
  SG_ BMS_Out_3_3VEnable : 16|1@1+ (1,0) [0.0|1.0] ""  TCU
@@ -122,8 +122,8 @@ BO_ 272 M_BMS_Status_Data_1: 8 BMS1
  SG_ BMS_IN_Supply_9V : 0|1@1+ (1,0) [0.0|1.0] ""  TCU
 
 BO_ 273 M_Current_Limit_Data: 8 BMS1
- SG_ Regenerative_Current_Limit : 32|14@1- (1,0) [-200.0|600.0] "A"  MCU,TCU
- SG_ Discharge_Current_Limit : 0|32@1- (1,0) [-200.0|200.0] "A"  MCU,TCU
+ SG_ Regenerative_Current_Limit : 16|16@1+ (1,0) [-200.0|600.0] "A"  MCU,TCU
+ SG_ Discharge_Current_Limit : 0|16@1+ (1,0) [-200.0|200.0] "A"  MCU,TCU
 
 BO_ 274 M_Battery_Pack_V_I: 8 BMS1
  SG_ Battery_Pack_Voltage : 16|16@1+ (0.1,0.0) [0.0|100.0] "V"  MCU,TCU
@@ -165,7 +165,7 @@ BO_ 280 M_Battery_IR_Data_4: 8 BMS1
  SG_ Cell_13_Internal_Resistance : 0|16@1+ (1,0) [0|0] "mOhm"  TCU
 
 BO_ 281 M_Battery_Charging_Data_1: 8 BMS1
- SG_ Charge_Demand_Current : 24|32@1+ (0.1,0.0) [0|0] "mA"  OBC,TCU
+ SG_ Charge_Demand_Current : 24|16@1+ (0.1,0.0) [0|0] "mA"  OBC,TCU
  SG_ Charge_Demand_Voltage : 8|16@1+ (0.1,0.0) [0.0|100.0] "V"  OBC,TCU
  SG_ BMS_Charge_Mode : 0|8@1+ (1,0) [0.0|5.0] ""  OBC,TCU
 
@@ -264,42 +264,42 @@ BO_ 516 S_Battery_Voltage_Data4: 8 BMS2
  SG_ Cell_Voltage_13 : 0|16@1+ (1,0) [0.0|5000.0] "mV"  TCU
 
 BO_ 517 S_Max_Min_Cell_Voltage: 8 BMS2
- SG_ Min_Cell_Voltage : 48|16@1+ (1,0) [0.0|5000.0] "mV"  TCU
- SG_ Max_Cell_Voltage : 32|16@1+ (1,0) [0.0|5000.0] "mV"  TCU
+ SG_ Min_Cell_Voltage : 16|16@1+ (1,0) [0.0|5000.0] "mV"  TCU
+ SG_ Max_Cell_Voltage : 0|16@1+ (1,0) [0.0|5000.0] "mV"  TCU
 
 BO_ 518 S_Battery_PDU_Temp_Data: 8 BMS2
- SG_ PDU_Temperature_BMS : 32|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
- SG_ PDU_Temperature_AFE : 0|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ PDU_Temperature_BMS : 16|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ PDU_Temperature_AFE : 0|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
 
 BO_ 519 S_Battery_Temp_Data_1: 8 BMS2
- SG_ Battery_Pack_Effective_Temp : 32|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
- SG_ Balancing_Temperature_AFE : 0|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ Battery_Pack_Effective_Temp : 16|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ Balancing_Temperature_AFE : 0|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
 
 BO_ 520 S_Battery_Temp_Data_2: 8 BMS2
- SG_ Battery_Pack_Temp_Sensor_2 : 32|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
- SG_ Battery_Pack_Temp_Sensor_1 : 0|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ Battery_Pack_Temp_Sensor_2 : 16|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ Battery_Pack_Temp_Sensor_1 : 0|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
 
 BO_ 521 S_Battery_Temp_Data_3: 8 BMS2
- SG_ Battery_Pack_Temp_Sensor_4 : 32|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
- SG_ Battery_Pack_Temp_Sensor_3 : 0|32@1- (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ Battery_Pack_Temp_Sensor_4 : 16|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
+ SG_ Battery_Pack_Temp_Sensor_3 : 0|16@1+ (0.001,0.0) [-55.0|200.0] "degC"  OBC,TCU
 
 BO_ 528 S_BMS_Status_Data_1: 8 BMS2
- SG_ Cell16_Balancing_Status  : 34|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell15_Balancing_Status  : 33|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell14_Balancing_Status  : 32|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell13_Balancing_Status  : 31|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell12_Balancing_Status  : 30|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell11_Balancing_Status  : 29|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell10_Balancing_Status  : 28|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell9_Balancing_Status  : 27|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell8_Balancing_Status  : 26|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell7_Balancing_Status  : 25|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell6_Balancing_Status  : 24|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell5_Balancing_Status  : 23|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell4_Balancing_Status  : 22|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell3_Balancing_Status  : 21|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell2_Balancing_Status  : 20|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell1_Balancing_Status  : 19|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell16_Balancing_Status : 34|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell15_Balancing_Status : 33|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell14_Balancing_Status : 32|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell13_Balancing_Status : 31|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell12_Balancing_Status : 30|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell11_Balancing_Status : 29|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell10_Balancing_Status : 28|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell9_Balancing_Status : 27|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell8_Balancing_Status : 26|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell7_Balancing_Status : 25|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell6_Balancing_Status : 24|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell5_Balancing_Status : 23|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell4_Balancing_Status : 22|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell3_Balancing_Status : 21|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell2_Balancing_Status : 20|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell1_Balancing_Status : 19|1@1+ (1,0) [0.0|1.0] ""  TCU
  SG_ BMS_SlowChg_Status : 18|1@1+ (1,0) [0.0|1.0] ""  TCU
  SG_ BMS_SlowChg_Auth : 17|1@1+ (1,0) [0.0|1.0] ""  TCU
  SG_ BMS_Out_3_3VEnable : 16|1@1+ (1,0) [0.0|1.0] ""  TCU
@@ -321,8 +321,8 @@ BO_ 528 S_BMS_Status_Data_1: 8 BMS2
  SG_ BMS_IN_Supply_9V : 0|1@1+ (1,0) [0.0|1.0] ""  TCU
 
 BO_ 529 S_Current_Limit_Data: 8 BMS2
- SG_ Regenerative_Current_Limit : 32|14@1- (1,0) [-200.0|600.0] "A"  MCU,TCU
- SG_ Discharge_Current_Limit : 0|32@1- (1,0) [-200.0|200.0] "A"  MCU,TCU
+ SG_ Regenerative_Current_Limit : 16|14@1+ (1,0) [-200.0|600.0] "A"  MCU,TCU
+ SG_ Discharge_Current_Limit : 0|16@1+ (1,0) [-200.0|200.0] "A"  MCU,TCU
 
 BO_ 530 S_Battery_Pack_V_I: 8 BMS2
  SG_ Battery_Pack_Voltage : 16|16@1+ (0.1,0.0) [0.0|100.0] "V"  MCU,TCU
@@ -364,7 +364,7 @@ BO_ 536 S_Battery_IR_Data_4: 8 BMS2
  SG_ Cell_13_Internal_Resistance : 0|16@1+ (1,0) [0|0] "mOhm"  TCU
 
 BO_ 537 S_Battery_Charging_Data_1: 8 BMS2
- SG_ Charge_Demand_Current : 24|32@1+ (0.1,0.0) [0|0] "mA"  OBC,TCU
+ SG_ Charge_Demand_Current : 24|16@1+ (0.1,0.0) [0|0] "mA"  OBC,TCU
  SG_ Charge_Demand_Voltage : 8|16@1+ (0.1,0.0) [0.0|100.0] "V"  OBC,TCU
  SG_ BMS_Charge_Mode : 0|8@1+ (1,0) [0.0|5.0] ""  OBC,TCU
 
@@ -498,11 +498,11 @@ CM_ BO_ 261 "";
 CM_ SG_ 261 Min_Cell_Voltage "Minimum Voltage in 16 cells";
 CM_ SG_ 261 Max_Cell_Voltage "Maximum voltage in 16 cells";
 CM_ BO_ 262 "";
-CM_ SG_ 262 PDU_Temperature_BMS "Temperature measured near the MOSFETs read by BMS ";
-CM_ SG_ 262 PDU_Temperature_AFE "PDU temperature read by AFE ";
+CM_ SG_ 262 PDU_Temperature_BMS "Temperature measured near the MOSFETs read by BMS";
+CM_ SG_ 262 PDU_Temperature_AFE "PDU temperature read by AFE";
 CM_ BO_ 263 "";
-CM_ SG_ 263 Battery_Pack_Effective_Temp "Battery pack effective temperature (Tbatt) ";
-CM_ SG_ 263 Balancing_Temperature_AFE "Balancing temperature read by AFE ";
+CM_ SG_ 263 Battery_Pack_Effective_Temp "Battery pack effective temperature (Tbatt)";
+CM_ SG_ 263 Balancing_Temperature_AFE "Balancing temperature read by AFE";
 CM_ BO_ 264 "";
 CM_ SG_ 264 Battery_Pack_Temp_Sensor_2 "Measured Pack temperature from Sensor 2";
 CM_ SG_ 264 Battery_Pack_Temp_Sensor_1 "Measured Pack temperature from Sensor 1";
@@ -510,37 +510,37 @@ CM_ BO_ 265 "";
 CM_ SG_ 265 Battery_Pack_Temp_Sensor_4 "Measured Pack temperature from Sensor 4";
 CM_ SG_ 265 Battery_Pack_Temp_Sensor_3 "Measured Pack temperature from Sensor 3";
 CM_ BO_ 272 "";
-CM_ SG_ 272 Cell16_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell16_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 272 Cell15_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell15_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 272 Cell14_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell14_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 272 Cell13_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell13_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 272 Cell12_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell12_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 272 Cell11_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell11_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 272 Cell10_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell10_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 272 Cell9_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell9_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 272 Cell8_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell8_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 272 Cell7_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell7_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 272 Cell6_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell6_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 272 Cell5_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell5_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 272 Cell4_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell4_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 272 Cell3_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell3_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 272 Cell2_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell2_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 272 Cell1_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 272 Cell1_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
 CM_ SG_ 272 BMS_SlowChg_Status "If Attempt happens, Need to check whether it is Passed or Failed
 0 for Failed
@@ -562,7 +562,7 @@ CM_ SG_ 272 BMS_IN_Discharge_Overcurrent "";
 CM_ SG_ 272 BMS_IN_Charge_Overcurrent "";
 CM_ SG_ 272 BMS_IN_AFE_Fault "";
 CM_ SG_ 272 BMS_IN_Supply_12V "";
-CM_ SG_ 272 BMS_IN_Supply_9V "All BMS digital input status (ON or OFF)  0--> Off, 1--> On ";
+CM_ SG_ 272 BMS_IN_Supply_9V "All BMS digital input status (ON or OFF) 0--> Off, 1--> On";
 CM_ BO_ 273 "";
 CM_ SG_ 273 Regenerative_Current_Limit "Max amount of Current that Feedback in the battery which is generated by Regenerative Breaking System";
 CM_ SG_ 273 Discharge_Current_Limit "Level of Charge Of Battery Relative to its Capacity";
@@ -615,51 +615,51 @@ CM_ SG_ 290 Prechg_Cont_Cmd "";
 CM_ SG_ 290 Contactor_State "Contactor States";
 CM_ SG_ 290 BMS_Modes "BMS modes";
 CM_ BO_ 291 "";
-CM_ SG_ 291 Ther_RunAway_Alert "1 for Indication of Thermal Run Away Alert ";
-CM_ SG_ 291 Therm_RunAway_CutOFF "1 for Indication of Thermal Run Away CutOff ";
-CM_ SG_ 291 PDU_TempRise_Perm "1 for Indication of Permanent Temperature Rise In PDU ";
-CM_ SG_ 291 Batt_TempRise_Perm "1 for Indication of Permanent Temperature Rise in Battery ";
-CM_ SG_ 291 Dis_CutOff "1 for Indication of Discharge Cut Off ";
-CM_ SG_ 291 Charge_CutOff "1 for Indication of Charge Cut Off ";
-CM_ SG_ 291 Dis_OvrTemp_Err "1 for Indication of Discharge Over Temperature Error ";
-CM_ SG_ 291 Dis_OvrTemp_Warn "1 for Indication of Discharge Over Temperature Warning ";
-CM_ SG_ 291 Chg_OvrTemp_Warn "1 for Indication of Charge Over Temperature Warning ";
-CM_ SG_ 291 Chg_Und_Vol_Warn "1 for Indication of Charge Under Voltage Warning ";
-CM_ SG_ 291 Chg_Ovr_Vol_Perm "1 for Indication of Permanent Charge Over Voltage ";
-CM_ SG_ 291 Chg_Ovr_Vol_Err "1 for Indication of Charge Over Voltage Error ";
-CM_ SG_ 291 Chg_Ovr_Vol_Warn "1 for Indication of Charge Over Voltage Warning ";
-CM_ SG_ 291 PDU_Temp_Err "1 for Indication of PDU Temperature Error ";
-CM_ SG_ 291 Over_Temp_Perm "1 for Indication of Permanent Over Temperature ";
-CM_ SG_ 291 Short_Circuit_Perm "1 for Indication of Permanent Short Circuit ";
-CM_ SG_ 291 Short_Circuit_Err "1 for Indication of Short Circuit Error ";
-CM_ SG_ 291 Cell_Und_Voltage "1 for Indication of Cell Under Voltage ";
+CM_ SG_ 291 Ther_RunAway_Alert "1 for Indication of Thermal Run Away Alert";
+CM_ SG_ 291 Therm_RunAway_CutOFF "1 for Indication of Thermal Run Away CutOff";
+CM_ SG_ 291 PDU_TempRise_Perm "1 for Indication of Permanent Temperature Rise In PDU";
+CM_ SG_ 291 Batt_TempRise_Perm "1 for Indication of Permanent Temperature Rise in Battery";
+CM_ SG_ 291 Dis_CutOff "1 for Indication of Discharge Cut Off";
+CM_ SG_ 291 Charge_CutOff "1 for Indication of Charge Cut Off";
+CM_ SG_ 291 Dis_OvrTemp_Err "1 for Indication of Discharge Over Temperature Error";
+CM_ SG_ 291 Dis_OvrTemp_Warn "1 for Indication of Discharge Over Temperature Warning";
+CM_ SG_ 291 Chg_OvrTemp_Warn "1 for Indication of Charge Over Temperature Warning";
+CM_ SG_ 291 Chg_Und_Vol_Warn "1 for Indication of Charge Under Voltage Warning";
+CM_ SG_ 291 Chg_Ovr_Vol_Perm "1 for Indication of Permanent Charge Over Voltage";
+CM_ SG_ 291 Chg_Ovr_Vol_Err "1 for Indication of Charge Over Voltage Error";
+CM_ SG_ 291 Chg_Ovr_Vol_Warn "1 for Indication of Charge Over Voltage Warning";
+CM_ SG_ 291 PDU_Temp_Err "1 for Indication of PDU Temperature Error";
+CM_ SG_ 291 Over_Temp_Perm "1 for Indication of Permanent Over Temperature";
+CM_ SG_ 291 Short_Circuit_Perm "1 for Indication of Permanent Short Circuit";
+CM_ SG_ 291 Short_Circuit_Err "1 for Indication of Short Circuit Error";
+CM_ SG_ 291 Cell_Und_Voltage "1 for Indication of Cell Under Voltage";
 CM_ SG_ 291 Cell_Ovr_Voltage "1 for Indication of Cell Over Voltage";
-CM_ SG_ 291 Dis_Connection_Err "1 for Indication of DisConnection Error ";
+CM_ SG_ 291 Dis_Connection_Err "1 for Indication of DisConnection Error";
 CM_ SG_ 291 Main_Connection_Err "1 for Indication of Main Connection Error";
-CM_ SG_ 291 Precharge_Fail_Perm "1 for Indication of Precharge Fail Permanent ";
+CM_ SG_ 291 Precharge_Fail_Perm "1 for Indication of Precharge Fail Permanent";
 CM_ SG_ 291 Precharge_Fail "1 for Indication of Precharge Fail";
-CM_ SG_ 291 PreCharge_Err_Short "1 for Indication of Precharge Short ";
+CM_ SG_ 291 PreCharge_Err_Short "1 for Indication of Precharge Short";
 CM_ SG_ 291 BMS_CutOff "1 for Indicaiton of BMS Cut Off mode";
 CM_ BO_ 292 "";
-CM_ SG_ 292 Cell_4_OCV "Estimated from measured cell voltage -  cell4";
-CM_ SG_ 292 Cell_3_OCV "Estimated from measured cell voltage -  cell3";
-CM_ SG_ 292 Cell_2_OCV "Estimated from measured cell voltage -  cell2";
-CM_ SG_ 292 Cell_1_OCV "Estimated from measured cell voltage -  cell1";
+CM_ SG_ 292 Cell_4_OCV "Estimated from measured cell voltage - cell4";
+CM_ SG_ 292 Cell_3_OCV "Estimated from measured cell voltage - cell3";
+CM_ SG_ 292 Cell_2_OCV "Estimated from measured cell voltage - cell2";
+CM_ SG_ 292 Cell_1_OCV "Estimated from measured cell voltage - cell1";
 CM_ BO_ 293 "";
-CM_ SG_ 293 Cell_8_OCV "Estimated from measured cell voltage -  cell8";
-CM_ SG_ 293 Cell_7_OCV "Estimated from measured cell voltage -  cell7";
-CM_ SG_ 293 Cell_6_OCV "Estimated from measured cell voltage -  cell6";
-CM_ SG_ 293 Cell_5_OCV "Estimated from measured cell voltage -  cell5";
+CM_ SG_ 293 Cell_8_OCV "Estimated from measured cell voltage - cell8";
+CM_ SG_ 293 Cell_7_OCV "Estimated from measured cell voltage - cell7";
+CM_ SG_ 293 Cell_6_OCV "Estimated from measured cell voltage - cell6";
+CM_ SG_ 293 Cell_5_OCV "Estimated from measured cell voltage - cell5";
 CM_ BO_ 294 "";
-CM_ SG_ 294 Cell_12_OCV "Estimated from measured cell voltage -  cell12";
-CM_ SG_ 294 Cell_11_OCV "Estimated from measured cell voltage -  cell11";
-CM_ SG_ 294 Cell_10_OCV "Estimated from measured cell voltage -  cell10";
-CM_ SG_ 294 Cell_9_OCV "Estimated from measured cell voltage -  cell9";
+CM_ SG_ 294 Cell_12_OCV "Estimated from measured cell voltage - cell12";
+CM_ SG_ 294 Cell_11_OCV "Estimated from measured cell voltage - cell11";
+CM_ SG_ 294 Cell_10_OCV "Estimated from measured cell voltage - cell10";
+CM_ SG_ 294 Cell_9_OCV "Estimated from measured cell voltage - cell9";
 CM_ BO_ 295 "";
-CM_ SG_ 295 Cell_16_OCV "Estimated from measured cell voltage -  cell16";
-CM_ SG_ 295 Cell_15_OCV "Estimated from measured cell voltage -  cell15";
-CM_ SG_ 295 Cell_14_OCV "Estimated from measured cell voltage -  cell14";
-CM_ SG_ 295 Cell_13_OCV "Estimated from measured cell voltage -  cell13";
+CM_ SG_ 295 Cell_16_OCV "Estimated from measured cell voltage - cell16";
+CM_ SG_ 295 Cell_15_OCV "Estimated from measured cell voltage - cell15";
+CM_ SG_ 295 Cell_14_OCV "Estimated from measured cell voltage - cell14";
+CM_ SG_ 295 Cell_13_OCV "Estimated from measured cell voltage - cell13";
 CM_ BO_ 512 "";
 CM_ SG_ 512 Unique_ID "Unique ID of the Master Battey pack";
 CM_ SG_ 512 SoC "SoC of the Master battery pack";
@@ -687,11 +687,11 @@ CM_ BO_ 517 "";
 CM_ SG_ 517 Min_Cell_Voltage "Minimum Voltage in 14 cells";
 CM_ SG_ 517 Max_Cell_Voltage "Maximum voltage in 14 cells";
 CM_ BO_ 518 "";
-CM_ SG_ 518 PDU_Temperature_BMS "Temperature measured near the MOSFETs read by BMS ";
-CM_ SG_ 518 PDU_Temperature_AFE "PDU temperature read by AFE ";
+CM_ SG_ 518 PDU_Temperature_BMS "Temperature measured near the MOSFETs read by BMS";
+CM_ SG_ 518 PDU_Temperature_AFE "PDU temperature read by AFE";
 CM_ BO_ 519 "";
-CM_ SG_ 519 Battery_Pack_Effective_Temp "Battery pack effective temperature (Tbatt) ";
-CM_ SG_ 519 Balancing_Temperature_AFE "Balancing temperature read by AFE ";
+CM_ SG_ 519 Battery_Pack_Effective_Temp "Battery pack effective temperature (Tbatt)";
+CM_ SG_ 519 Balancing_Temperature_AFE "Balancing temperature read by AFE";
 CM_ BO_ 520 "";
 CM_ SG_ 520 Battery_Pack_Temp_Sensor_2 "Measured Pack temperature from Sensor 2";
 CM_ SG_ 520 Battery_Pack_Temp_Sensor_1 "Measured Pack temperature from Sensor 1";
@@ -699,37 +699,37 @@ CM_ BO_ 521 "";
 CM_ SG_ 521 Battery_Pack_Temp_Sensor_4 "Measured Pack temperature from Sensor 4";
 CM_ SG_ 521 Battery_Pack_Temp_Sensor_3 "Measured Pack temperature from Sensor 3";
 CM_ BO_ 528 "";
-CM_ SG_ 528 Cell16_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell16_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 528 Cell15_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell15_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 528 Cell14_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell14_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 528 Cell13_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell13_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 528 Cell12_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell12_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 528 Cell11_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell11_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 528 Cell10_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell10_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 528 Cell9_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell9_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 528 Cell8_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell8_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 528 Cell7_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell7_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 528 Cell6_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell6_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 528 Cell5_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell5_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 528 Cell4_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell4_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 528 Cell3_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell3_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 528 Cell2_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell2_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
-CM_ SG_ 528 Cell1_Balancing_Status  "1 for Cell balancing happening
+CM_ SG_ 528 Cell1_Balancing_Status "1 for Cell balancing happening
 0 for Cell balancing not happening";
 CM_ SG_ 528 BMS_SlowChg_Status "If Attempt happens, Need to check whether it is Passed or Failed
 0 for Failed
@@ -751,7 +751,7 @@ CM_ SG_ 528 BMS_IN_Discharge_Overcurrent "";
 CM_ SG_ 528 BMS_IN_Charge_Overcurrent "";
 CM_ SG_ 528 BMS_IN_AFE_Fault "";
 CM_ SG_ 528 BMS_IN_Supply_12V "";
-CM_ SG_ 528 BMS_IN_Supply_9V "All BMS digital input status (ON or OFF)  0--> Off, 1--> On ";
+CM_ SG_ 528 BMS_IN_Supply_9V "All BMS digital input status (ON or OFF) 0--> Off, 1--> On";
 CM_ BO_ 529 "";
 CM_ SG_ 529 Regenerative_Current_Limit "Max amount of Current that Feedback in the battery which is generated by Regenerative Breaking System";
 CM_ SG_ 529 Discharge_Current_Limit "Level of Charge Of Battery Relative to its Capacity";
@@ -804,51 +804,51 @@ CM_ SG_ 546 Prechg_Cont_Cmd "";
 CM_ SG_ 546 Contactor_State "Contactor States";
 CM_ SG_ 546 BMS_Modes "BMS modes";
 CM_ BO_ 547 "";
-CM_ SG_ 547 Ther_RunAway_Alert "1 for Indication of Thermal Run Away Alert ";
-CM_ SG_ 547 Therm_RunAway_CutOFF "1 for Indication of Thermal Run Away CutOff ";
-CM_ SG_ 547 PDU_TempRise_Perm "1 for Indication of Permanent Temperature Rise In PDU ";
-CM_ SG_ 547 Batt_TempRise_Perm "1 for Indication of Permanent Temperature Rise in Battery ";
-CM_ SG_ 547 Dis_CutOff "1 for Indication of Discharge Cut Off ";
-CM_ SG_ 547 Charge_CutOff "1 for Indication of Charge Cut Off ";
-CM_ SG_ 547 Dis_OvrTemp_Err "1 for Indication of Discharge Over Temperature Error ";
-CM_ SG_ 547 Dis_OvrTemp_Warn "1 for Indication of Discharge Over Temperature Warning ";
-CM_ SG_ 547 Chg_OvrTemp_Warn "1 for Indication of Charge Over Temperature Warning ";
-CM_ SG_ 547 Chg_Und_Vol_Warn "1 for Indication of Charge Under Voltage Warning ";
-CM_ SG_ 547 Chg_Ovr_Vol_Perm "1 for Indication of Permanent Charge Over Voltage ";
-CM_ SG_ 547 Chg_Ovr_Vol_Err "1 for Indication of Charge Over Voltage Error ";
-CM_ SG_ 547 Chg_Ovr_Vol_Warn "1 for Indication of Charge Over Voltage Warning ";
-CM_ SG_ 547 PDU_Temp_Err "1 for Indication of PDU Temperature Error ";
-CM_ SG_ 547 Over_Temp_Perm "1 for Indication of Permanent Over Temperature ";
-CM_ SG_ 547 Short_Circuit_Perm "1 for Indication of Permanent Short Circuit ";
-CM_ SG_ 547 Short_Circuit_Err "1 for Indication of Short Circuit Error ";
-CM_ SG_ 547 Cell_Und_Voltage "1 for Indication of Cell Under Voltage ";
+CM_ SG_ 547 Ther_RunAway_Alert "1 for Indication of Thermal Run Away Alert";
+CM_ SG_ 547 Therm_RunAway_CutOFF "1 for Indication of Thermal Run Away CutOff";
+CM_ SG_ 547 PDU_TempRise_Perm "1 for Indication of Permanent Temperature Rise In PDU";
+CM_ SG_ 547 Batt_TempRise_Perm "1 for Indication of Permanent Temperature Rise in Battery";
+CM_ SG_ 547 Dis_CutOff "1 for Indication of Discharge Cut Off";
+CM_ SG_ 547 Charge_CutOff "1 for Indication of Charge Cut Off";
+CM_ SG_ 547 Dis_OvrTemp_Err "1 for Indication of Discharge Over Temperature Error";
+CM_ SG_ 547 Dis_OvrTemp_Warn "1 for Indication of Discharge Over Temperature Warning";
+CM_ SG_ 547 Chg_OvrTemp_Warn "1 for Indication of Charge Over Temperature Warning";
+CM_ SG_ 547 Chg_Und_Vol_Warn "1 for Indication of Charge Under Voltage Warning";
+CM_ SG_ 547 Chg_Ovr_Vol_Perm "1 for Indication of Permanent Charge Over Voltage";
+CM_ SG_ 547 Chg_Ovr_Vol_Err "1 for Indication of Charge Over Voltage Error";
+CM_ SG_ 547 Chg_Ovr_Vol_Warn "1 for Indication of Charge Over Voltage Warning";
+CM_ SG_ 547 PDU_Temp_Err "1 for Indication of PDU Temperature Error";
+CM_ SG_ 547 Over_Temp_Perm "1 for Indication of Permanent Over Temperature";
+CM_ SG_ 547 Short_Circuit_Perm "1 for Indication of Permanent Short Circuit";
+CM_ SG_ 547 Short_Circuit_Err "1 for Indication of Short Circuit Error";
+CM_ SG_ 547 Cell_Und_Voltage "1 for Indication of Cell Under Voltage";
 CM_ SG_ 547 Cell_Ovr_Voltage "1 for Indication of Cell Over Voltage";
-CM_ SG_ 547 Dis_Connection_Err "1 for Indication of DisConnection Error ";
+CM_ SG_ 547 Dis_Connection_Err "1 for Indication of DisConnection Error";
 CM_ SG_ 547 Main_Connection_Err "1 for Indication of Main Connection Error";
-CM_ SG_ 547 Precharge_Fail_Perm "1 for Indication of Precharge Fail Permanent ";
+CM_ SG_ 547 Precharge_Fail_Perm "1 for Indication of Precharge Fail Permanent";
 CM_ SG_ 547 Precharge_Fail "1 for Indication of Precharge Fail";
-CM_ SG_ 547 PreCharge_Err_Short "1 for Indication of Precharge Short ";
+CM_ SG_ 547 PreCharge_Err_Short "1 for Indication of Precharge Short";
 CM_ SG_ 547 BMS_CutOff "1 for Indicaiton of BMS Cut Off mode";
 CM_ BO_ 548 "";
-CM_ SG_ 548 Cell_4_OCV "Estimated from measured cell voltage -  cell4";
-CM_ SG_ 548 Cell_3_OCV "Estimated from measured cell voltage -  cell3";
-CM_ SG_ 548 Cell_2_OCV "Estimated from measured cell voltage -  cell2";
-CM_ SG_ 548 Cell_1_OCV "Estimated from measured cell voltage -  cell1";
+CM_ SG_ 548 Cell_4_OCV "Estimated from measured cell voltage - cell4";
+CM_ SG_ 548 Cell_3_OCV "Estimated from measured cell voltage - cell3";
+CM_ SG_ 548 Cell_2_OCV "Estimated from measured cell voltage - cell2";
+CM_ SG_ 548 Cell_1_OCV "Estimated from measured cell voltage - cell1";
 CM_ BO_ 549 "";
-CM_ SG_ 549 Cell_8_OCV "Estimated from measured cell voltage -  cell8";
-CM_ SG_ 549 Cell_7_OCV "Estimated from measured cell voltage -  cell7";
-CM_ SG_ 549 Cell_6_OCV "Estimated from measured cell voltage -  cell6";
-CM_ SG_ 549 Cell_5_OCV "Estimated from measured cell voltage -  cell5";
+CM_ SG_ 549 Cell_8_OCV "Estimated from measured cell voltage - cell8";
+CM_ SG_ 549 Cell_7_OCV "Estimated from measured cell voltage - cell7";
+CM_ SG_ 549 Cell_6_OCV "Estimated from measured cell voltage - cell6";
+CM_ SG_ 549 Cell_5_OCV "Estimated from measured cell voltage - cell5";
 CM_ BO_ 550 "";
-CM_ SG_ 550 Cell_12_OCV "Estimated from measured cell voltage -  cell12";
-CM_ SG_ 550 Cell_11_OCV "Estimated from measured cell voltage -  cell11";
-CM_ SG_ 550 Cell_10_OCV "Estimated from measured cell voltage -  cell10";
-CM_ SG_ 550 Cell_9_OCV "Estimated from measured cell voltage -  cell9";
+CM_ SG_ 550 Cell_12_OCV "Estimated from measured cell voltage - cell12";
+CM_ SG_ 550 Cell_11_OCV "Estimated from measured cell voltage - cell11";
+CM_ SG_ 550 Cell_10_OCV "Estimated from measured cell voltage - cell10";
+CM_ SG_ 550 Cell_9_OCV "Estimated from measured cell voltage - cell9";
 CM_ BO_ 551 "";
-CM_ SG_ 551 Cell_16_OCV "Estimated from measured cell voltage -  cell16";
-CM_ SG_ 551 Cell_15_OCV "Estimated from measured cell voltage -  cell15";
-CM_ SG_ 551 Cell_14_OCV "Estimated from measured cell voltage -  cell14";
-CM_ SG_ 551 Cell_13_OCV "Estimated from measured cell voltage -  cell13";
+CM_ SG_ 551 Cell_16_OCV "Estimated from measured cell voltage - cell16";
+CM_ SG_ 551 Cell_15_OCV "Estimated from measured cell voltage - cell15";
+CM_ SG_ 551 Cell_14_OCV "Estimated from measured cell voltage - cell14";
+CM_ SG_ 551 Cell_13_OCV "Estimated from measured cell voltage - cell13";
 CM_ BO_ 768 "";
 CM_ SG_ 768 Motor_Over_Temperature "";
 CM_ SG_ 768 Motor_OvrSpeed "";
@@ -969,22 +969,22 @@ VAL_ 264 Battery_Pack_Temp_Sensor_2  ;
 VAL_ 264 Battery_Pack_Temp_Sensor_1  ;
 VAL_ 265 Battery_Pack_Temp_Sensor_4  ;
 VAL_ 265 Battery_Pack_Temp_Sensor_3  ;
-VAL_ 272 Cell16_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 272 Cell15_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 272 Cell14_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 272 Cell13_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 272 Cell12_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 272 Cell11_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 272 Cell10_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 272 Cell9_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 272 Cell8_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 272 Cell7_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 272 Cell6_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 272 Cell5_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 272 Cell4_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 272 Cell3_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 272 Cell2_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 272 Cell1_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell16_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell15_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell14_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell13_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell12_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell11_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell10_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell9_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell8_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell7_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell6_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell5_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell4_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell3_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell2_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 272 Cell1_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
 VAL_ 272 BMS_SlowChg_Status 0 "Fail" 1 "Pass" ;
 VAL_ 272 BMS_SlowChg_Auth 0 "No_attempt" 1 "Attempt" ;
 VAL_ 272 BMS_Out_3_3VEnable 0 "Disable" 1 "Enable" ;
@@ -1112,22 +1112,22 @@ VAL_ 520 Battery_Pack_Temp_Sensor_2  ;
 VAL_ 520 Battery_Pack_Temp_Sensor_1  ;
 VAL_ 521 Battery_Pack_Temp_Sensor_4  ;
 VAL_ 521 Battery_Pack_Temp_Sensor_3  ;
-VAL_ 528 Cell16_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 528 Cell15_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 528 Cell14_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 528 Cell13_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 528 Cell12_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 528 Cell11_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 528 Cell10_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 528 Cell9_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 528 Cell8_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 528 Cell7_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 528 Cell6_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 528 Cell5_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 528 Cell4_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 528 Cell3_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 528 Cell2_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
-VAL_ 528 Cell1_Balancing_Status  0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell16_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell15_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell14_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell13_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell12_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell11_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell10_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell9_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell8_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell7_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell6_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell5_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell4_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell3_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell2_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
+VAL_ 528 Cell1_Balancing_Status 0 "Not_Balancing" 1 "Balancing" ;
 VAL_ 528 BMS_SlowChg_Status 0 "Fail" 1 "Pass" ;
 VAL_ 528 BMS_SlowChg_Auth 0 "No_attempt" 1 "Attempt" ;
 VAL_ 528 BMS_Out_3_3VEnable 0 "Disable" 1 "Enable" ;

@@ -103,23 +103,23 @@ typedef struct {
 } M_Max_Min_Cell_Voltage_t;
 
 typedef struct {
-    int32_t PDU_Temperature_AFE : 32;
-    int32_t PDU_Temperature_BMS : 32;
+    uint16_t PDU_Temperature_AFE : 16;
+    uint16_t PDU_Temperature_BMS : 16;
 } M_Battery_PDU_Temp_Data_t;
 
 typedef struct {
-    int32_t Balancing_Temperature_AFE : 32;
-    int32_t Battery_Pack_Effective_Temp : 32;
+    uint16_t Balancing_Temperature_AFE : 16;
+    uint16_t Battery_Pack_Effective_Temp : 16;
 } M_Battery_Temp_Data_1_t;
 
 typedef struct {
-    int32_t Battery_Pack_Temp_Sensor_1 : 32;
-    int32_t Battery_Pack_Temp_Sensor_2 : 32;
+    uint16_t Battery_Pack_Temp_Sensor_1 : 16;
+    uint16_t Battery_Pack_Temp_Sensor_2 : 16;
 } M_Battery_Temp_Data_2_t;
 
 typedef struct {
-    int32_t Battery_Pack_Temp_Sensor_3 : 32;
-    int32_t Battery_Pack_Temp_Sensor_4 : 32;
+    uint16_t Battery_Pack_Temp_Sensor_3 : 16;
+    uint16_t Battery_Pack_Temp_Sensor_4 : 16;
 } M_Battery_Temp_Data_3_t;
 
 typedef struct {
@@ -161,8 +161,8 @@ typedef struct {
 } M_BMS_Status_Data_1_t;
 
 typedef struct {
-    int32_t Discharge_Current_Limit : 32;
-    int16_t Regenerative_Current_Limit : 14;
+    uint16_t Discharge_Current_Limit : 16;
+    uint16_t Regenerative_Current_Limit : 16;
 } M_Current_Limit_Data_t;
 
 typedef struct {
@@ -214,7 +214,7 @@ typedef struct {
 typedef struct {
     uint8_t BMS_Charge_Mode : 8;
     uint16_t Charge_Demand_Voltage : 16;
-    uint32_t Charge_Demand_Current : 32;
+    uint16_t Charge_Demand_Current : 16;
 } M_Battery_Charging_Data_1_t;
 
 typedef struct {
@@ -330,23 +330,23 @@ typedef struct {
 } S_Max_Min_Cell_Voltage_t;
 
 typedef struct {
-    int32_t PDU_Temperature_AFE : 32;
-    int32_t PDU_Temperature_BMS : 32;
+    uint16_t PDU_Temperature_AFE : 16;
+    uint16_t PDU_Temperature_BMS : 16;
 } S_Battery_PDU_Temp_Data_t;
 
 typedef struct {
-    int32_t Balancing_Temperature_AFE : 32;
-    int32_t Battery_Pack_Effective_Temp : 32;
+    uint16_t Balancing_Temperature_AFE : 16;
+    uint16_t Battery_Pack_Effective_Temp : 16;
 } S_Battery_Temp_Data_1_t;
 
 typedef struct {
-    int32_t Battery_Pack_Temp_Sensor_1 : 32;
-    int32_t Battery_Pack_Temp_Sensor_2 : 32;
+    uint16_t Battery_Pack_Temp_Sensor_1 : 16;
+    uint16_t Battery_Pack_Temp_Sensor_2 : 16;
 } S_Battery_Temp_Data_2_t;
 
 typedef struct {
-    int32_t Battery_Pack_Temp_Sensor_3 : 32;
-    int32_t Battery_Pack_Temp_Sensor_4 : 32;
+    uint16_t Battery_Pack_Temp_Sensor_3 : 16;
+    uint16_t Battery_Pack_Temp_Sensor_4 : 16;
 } S_Battery_Temp_Data_3_t;
 
 typedef struct {
@@ -388,8 +388,8 @@ typedef struct {
 } S_BMS_Status_Data_1_t;
 
 typedef struct {
-    int32_t Discharge_Current_Limit : 32;
-    int16_t Regenerative_Current_Limit : 14;
+    uint16_t Discharge_Current_Limit : 16;
+    uint16_t Regenerative_Current_Limit : 14;
 } S_Current_Limit_Data_t;
 
 typedef struct {
@@ -441,7 +441,7 @@ typedef struct {
 typedef struct {
     uint8_t BMS_Charge_Mode : 8;
     uint16_t Charge_Demand_Voltage : 16;
-    uint32_t Charge_Demand_Current : 32;
+    uint16_t Charge_Demand_Current : 16;
 } S_Battery_Charging_Data_1_t;
 
 typedef struct {
