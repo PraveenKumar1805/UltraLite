@@ -37,8 +37,8 @@ BU_:
 
 
 BO_ 256 M_Data: 8 BMS1
- SG_ Unique_ID : 16|48@1+ (1,0) [0|0] "ID"  BMS2,Cluster,TCU
- SG_ SoC : 0|16@1+ (0.1,0.0) [0.0|100.0] "%"  BMS2,Cluster,TCU
+ SG_ Unique_ID : 16|48@1+ (1,0) [0|0] "ID"  BMS2,TCU
+ SG_ SoC : 0|16@1+ (0.1,0.0) [0.0|100.0] "%"  BMS2,TCU
 
 BO_ 257 M_Battery_Voltage_Data1: 8 BMS1
  SG_ Cell_Voltage_4 : 48|16@1+ (1,0) [0.0|5000.0] "mV"  TCU
@@ -130,9 +130,9 @@ BO_ 274 M_Battery_Pack_V_I: 8 BMS1
  SG_ Battery_Pack_Current : 0|16@1+ (0.1,0.0) [0.0|200.0] "A"  MCU,TCU
 
 BO_ 275 M_Battery_Data_1: 8 BMS1
- SG_ Battery_Current_AFE : 32|16@1+ (0.1,-200.0) [-200.0|200.0] "A"  MCU,OBC,TCU
- SG_ SoH : 16|16@1+ (0.1,0.0) [0.0|100.0] "%"  MCU,OBC,TCU
- SG_ SoC : 0|16@1+ (0.1,0.0) [0.0|100.0] "%"  MCU,OBC,TCU
+ SG_ Battery_Current_AFE : 32|16@1+ (0.1,-200.0) [-200.0|200.0] "A"  Cluster,MCU,OBC,TCU
+ SG_ SoH : 16|16@1+ (0.1,0.0) [0.0|100.0] "%"  Cluster,MCU,OBC,TCU
+ SG_ SoC : 0|16@1+ (0.1,0.0) [0.0|100.0] "%"  Cluster,MCU,OBC,TCU
 
 BO_ 276 M_Battery_Data_2: 8 BMS1
  SG_ KwHr_Accumulated : 48|4@1+ (0.01,0.0) [0.0|6.0] "KwHr"  TCU
@@ -170,12 +170,12 @@ BO_ 281 M_Battery_Charging_Data_1: 8 BMS1
  SG_ BMS_Charge_Mode : 0|8@1+ (1,0) [0.0|5.0] ""  OBC,TCU
 
 BO_ 288 M_Battery_Data_3: 8 BMS1
- SG_ Bus_Voltage : 48|16@1+ (0.1,0.0) [0.0|100.0] "V"  Cluster,TCU
- SG_ RTC_Date : 0|48@1+ (1,0) [0|0] "Sec"  Cluster,TCU
+ SG_ Bus_Voltage : 48|16@1+ (0.1,0.0) [0.0|100.0] "V"  TCU
+ SG_ RTC_Date : 0|48@1+ (1,0) [0|0] "Sec"  TCU
 
 BO_ 289 M_Battery_Data_4: 8 BMS1
- SG_ Time_To_Charge : 48|16@1+ (1,0) [0|0] ""  Cluster,TCU
- SG_ RTC_Time : 0|48@1+ (1,0) [0|0] ""  Cluster,TCU
+ SG_ Time_To_Charge : 48|16@1+ (1,0) [0|0] ""  TCU
+ SG_ RTC_Time : 0|48@1+ (1,0) [0|0] ""  TCU
 
 BO_ 290 M_Battery_Data_5: 8 BMS1
  SG_ DisChg_Cont_Cmd : 10|1@1+ (1,0) [0.0|1.0] ""  BMS2,MCU,TCU
@@ -185,31 +185,31 @@ BO_ 290 M_Battery_Data_5: 8 BMS1
  SG_ BMS_Modes : 0|4@1+ (1,0) [0.0|7.0] ""  BMS2,MCU,TCU
 
 BO_ 291 M_Battery_Fault_Data: 8 BMS1
- SG_ Ther_RunAway_Alert : 24|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Therm_RunAway_CutOFF : 23|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ PDU_TempRise_Perm : 22|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Batt_TempRise_Perm : 21|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Dis_CutOff : 20|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Charge_CutOff : 19|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Dis_OvrTemp_Err : 18|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Dis_OvrTemp_Warn : 17|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Chg_OvrTemp_Warn : 16|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Chg_Und_Vol_Warn : 15|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Chg_Ovr_Vol_Perm : 14|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Chg_Ovr_Vol_Err : 13|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Chg_Ovr_Vol_Warn : 12|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ PDU_Temp_Err : 11|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Over_Temp_Perm : 10|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Short_Circuit_Perm : 9|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Short_Circuit_Err : 8|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Cell_Und_Voltage : 7|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Cell_Ovr_Voltage : 6|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Dis_Connection_Err : 5|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Main_Connection_Err : 4|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Precharge_Fail_Perm : 3|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Precharge_Fail : 2|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ PreCharge_Err_Short : 1|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ BMS_CutOff : 0|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
+ SG_ Ther_RunAway_Alert : 24|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Therm_RunAway_CutOFF : 23|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ PDU_TempRise_Perm : 22|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Batt_TempRise_Perm : 21|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Dis_CutOff : 20|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Charge_CutOff : 19|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Dis_OvrTemp_Err : 18|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Dis_OvrTemp_Warn : 17|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_OvrTemp_Warn : 16|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Und_Vol_Warn : 15|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Ovr_Vol_Perm : 14|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Ovr_Vol_Err : 13|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Ovr_Vol_Warn : 12|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ PDU_Temp_Err : 11|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Over_Temp_Perm : 10|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Short_Circuit_Perm : 9|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Short_Circuit_Err : 8|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell_Und_Voltage : 7|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell_Ovr_Voltage : 6|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Dis_Connection_Err : 5|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Main_Connection_Err : 4|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Precharge_Fail_Perm : 3|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Precharge_Fail : 2|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ PreCharge_Err_Short : 1|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ BMS_CutOff : 0|1@1+ (1,0) [0.0|1.0] ""  TCU
 
 BO_ 292 M_Battery_OCV_Data1: 8 BMS1
  SG_ Cell_4_OCV : 48|16@1+ (1,0) [0.0|5000.0] "mV"  TCU
@@ -236,8 +236,8 @@ BO_ 295 M_Battery_OCV_Data4: 8 BMS1
  SG_ Cell_13_OCV : 0|16@1+ (1,0) [0.0|5000.0] "mV"  TCU
 
 BO_ 512 S_Data: 8 BMS2
- SG_ Unique_ID : 16|48@1+ (1,0) [0|0] "ID"  BMS1,Cluster,TCU
- SG_ SoC : 0|16@1+ (0.1,0.0) [0.0|100.0] "%"  BMS1,Cluster,TCU
+ SG_ Unique_ID : 16|48@1+ (1,0) [0|0] "ID"  BMS1,TCU
+ SG_ SoC : 0|16@1+ (0.1,0.0) [0.0|100.0] "%"  BMS1,TCU
 
 BO_ 513 S_Battery_Voltage_Data1: 8 BMS2
  SG_ Cell_Voltage_4 : 48|16@1+ (1,0) [0.0|5000.0] "mV"  TCU
@@ -329,9 +329,9 @@ BO_ 530 S_Battery_Pack_V_I: 8 BMS2
  SG_ Battery_Pack_Current : 0|16@1+ (0.1,0.0) [0.0|200.0] "A"  MCU,TCU
 
 BO_ 531 S_Battery_Data_1: 8 BMS2
- SG_ Battery_Current_AFE : 32|16@1+ (0.1,-200.0) [-200.0|200.0] "A"  MCU,OBC,TCU
- SG_ SoH : 16|16@1+ (0.1,0.0) [0.0|100.0] "%"  MCU,OBC,TCU
- SG_ SoC : 0|16@1+ (0.1,0.0) [0.0|100.0] "%"  MCU,OBC,TCU
+ SG_ Battery_Current_AFE : 32|16@1+ (0.1,-200.0) [-200.0|200.0] "A"  Cluster,MCU,OBC,TCU
+ SG_ SoH : 16|16@1+ (0.1,0.0) [0.0|100.0] "%"  Cluster,MCU,OBC,TCU
+ SG_ SoC : 0|16@1+ (0.1,0.0) [0.0|100.0] "%"  Cluster,MCU,OBC,TCU
 
 BO_ 532 S_Battery_Data_2: 8 BMS2
  SG_ KwHr_Accumulated : 48|4@1+ (0.01,0.0) [0.0|6.0] "KwHr"  TCU
@@ -369,12 +369,12 @@ BO_ 537 S_Battery_Charging_Data_1: 8 BMS2
  SG_ BMS_Charge_Mode : 0|8@1+ (1,0) [0.0|5.0] ""  OBC,TCU
 
 BO_ 544 S_Battery_Data_3: 8 BMS2
- SG_ Bus_Voltage : 48|16@1+ (0.1,0.0) [0.0|100.0] "V"  Cluster,TCU
- SG_ RTC_Date : 0|48@1+ (1,0) [0|0] "Sec"  Cluster,TCU
+ SG_ Bus_Voltage : 48|16@1+ (0.1,0.0) [0.0|100.0] "V"  TCU
+ SG_ RTC_Date : 0|48@1+ (1,0) [0|0] "Sec"  TCU
 
 BO_ 545 S_Battery_Data_4: 8 BMS2
- SG_ Time_To_Charge : 48|16@1+ (1,0) [0|0] ""  Cluster,TCU
- SG_ RTC_Time : 0|48@1+ (1,0) [0|0] ""  Cluster,TCU
+ SG_ Time_To_Charge : 48|16@1+ (1,0) [0|0] ""  TCU
+ SG_ RTC_Time : 0|48@1+ (1,0) [0|0] ""  TCU
 
 BO_ 546 S_Battery_Data_5: 8 BMS2
  SG_ DisChg_Cont_Cmd : 10|1@1+ (1,0) [0.0|1.0] ""  BMS1,MCU,TCU
@@ -384,31 +384,31 @@ BO_ 546 S_Battery_Data_5: 8 BMS2
  SG_ BMS_Modes : 0|4@1+ (1,0) [0.0|7.0] ""  BMS1,MCU,TCU
 
 BO_ 547 S_Battery_Fault_Data: 8 BMS2
- SG_ Ther_RunAway_Alert : 24|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Therm_RunAway_CutOFF : 23|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ PDU_TempRise_Perm : 22|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Batt_TempRise_Perm : 21|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Dis_CutOff : 20|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Charge_CutOff : 19|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Dis_OvrTemp_Err : 18|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Dis_OvrTemp_Warn : 17|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Chg_OvrTemp_Warn : 16|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Chg_Und_Vol_Warn : 15|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Chg_Ovr_Vol_Perm : 14|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Chg_Ovr_Vol_Err : 13|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Chg_Ovr_Vol_Warn : 12|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ PDU_Temp_Err : 11|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Over_Temp_Perm : 10|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Short_Circuit_Perm : 9|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Short_Circuit_Err : 8|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Cell_Und_Voltage : 7|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Cell_Ovr_Voltage : 6|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Dis_Connection_Err : 5|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Main_Connection_Err : 4|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Precharge_Fail_Perm : 3|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Precharge_Fail : 2|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ PreCharge_Err_Short : 1|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ BMS_CutOff : 0|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
+ SG_ Ther_RunAway_Alert : 24|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Therm_RunAway_CutOFF : 23|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ PDU_TempRise_Perm : 22|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Batt_TempRise_Perm : 21|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Dis_CutOff : 20|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Charge_CutOff : 19|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Dis_OvrTemp_Err : 18|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Dis_OvrTemp_Warn : 17|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_OvrTemp_Warn : 16|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Und_Vol_Warn : 15|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Ovr_Vol_Perm : 14|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Ovr_Vol_Err : 13|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Ovr_Vol_Warn : 12|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ PDU_Temp_Err : 11|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Over_Temp_Perm : 10|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Short_Circuit_Perm : 9|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Short_Circuit_Err : 8|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell_Und_Voltage : 7|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell_Ovr_Voltage : 6|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Dis_Connection_Err : 5|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Main_Connection_Err : 4|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Precharge_Fail_Perm : 3|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Precharge_Fail : 2|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ PreCharge_Err_Short : 1|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ BMS_CutOff : 0|1@1+ (1,0) [0.0|1.0] ""  TCU
 
 BO_ 548 S_Battery_OCV_Data1: 8 BMS2
  SG_ Cell_4_OCV : 48|16@1+ (1,0) [0.0|5000.0] "mV"  TCU
@@ -435,10 +435,13 @@ BO_ 551 S_Battery_OCV_Data4: 8 BMS2
  SG_ Cell_13_OCV : 0|16@1+ (1,0) [0.0|5000.0] "mV"  TCU
 
 BO_ 768 MCU_Fault_Data: 8 MCU
+ SG_ MCU_High_Voltage_Err : 12|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
+ SG_ MCU_Low_Voltage_Err : 11|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
+ SG_ Throttle_Error : 10|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
  SG_ Motor_Over_Temperature : 9|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
  SG_ Motor_OvrSpeed : 8|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
  SG_ Motor_Unint_AccDeacc : 7|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
- SG_ Motor_Stall_Detection : 6|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
+ SG_ Motor_Hall_Sensor_Error : 6|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
  SG_ Under_Voltage : 5|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
  SG_ Over_Voltage : 4|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
  SG_ MCU_Over_Temperature : 3|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
@@ -447,16 +450,21 @@ BO_ 768 MCU_Fault_Data: 8 MCU
  SG_ Short_Circuit : 0|1@1+ (1,0) [0.0|1.0] ""  Cluster,TCU
 
 BO_ 769 MCU_Data: 8 MCU
- SG_ Regen_State : 40|1@1+ (1,0) [0.0|1.0] ""  BMS1,BMS2,TCU
- SG_ Vehicle_Speed : 8|32@1+ (1,0) [0.0|200.0] "km/h"  BMS1,BMS2,TCU
- SG_ BrakeSwitch_Status : 6|1@1+ (1,0) [0.0|1.0] ""  BMS1,BMS2,TCU
- SG_ SideStand_Status : 5|1@1+ (1,0) [0.0|1.0] ""  BMS1,BMS2,TCU
- SG_ Charge_CutOff : 4|1@1+ (1,0) [0.0|1.0] ""  BMS1,BMS2,TCU
- SG_ Drive_Modes : 0|4@1+ (1,0) [0.0|5.0] ""  BMS1,BMS2,TCU
+ SG_ Regen_State : 32|1@1+ (1,0) [0.0|1.0] ""  BMS1,BMS2,Cluster,TCU
+ SG_ Motor_RPM : 24|8@1+ (1,-100) [0.0|0] "RPM"  BMS1,BMS2,Cluster,TCU
+ SG_ Vehicle_Speed : 8|16@1+ (1,0) [0.0|200.0] "km/h"  BMS1,BMS2,Cluster,TCU
+ SG_ BrakeSwitch_Status : 6|1@1+ (1,0) [0.0|1.0] ""  BMS1,BMS2,Cluster,TCU
+ SG_ SideStand_Status : 5|1@1+ (1,0) [0.0|1.0] ""  BMS1,BMS2,Cluster,TCU
+ SG_ Charge_CutOff : 4|1@1+ (1,0) [0.0|1.0] ""  BMS1,BMS2,Cluster,TCU
+ SG_ Drive_Modes : 0|4@1+ (1,0) [0.0|5.0] ""  BMS1,BMS2,Cluster,TCU
 
 BO_ 770 MCU_Odo_Data: 8 MCU
- SG_ Trip_Odo_Data : 32|32@1+ (0.1,0.0) [0.0|4294967295.0] "Meters"  Cluster,TCU
- SG_ Vehicle_Odo_Data : 0|32@1+ (0.1,0.0) [0.0|4294967295.0] "Meters"  Cluster,TCU
+ SG_ Trip_Odo_Data : 16|16@1+ (0.1,0.0) [0.0|4294967295.0] "Meters"  Cluster,TCU
+ SG_ Vehicle_Odo_Data : 0|16@1+ (0.1,0.0) [0.0|4294967295.0] "Meters"  Cluster,TCU
+
+BO_ 771 MCU_Temp_Data: 8 MCU
+ SG_ Motor_Temp_Data : 16|16@1- (0.1,0.0) [0.0|4294967295.0] "degC"  Cluster,TCU
+ SG_ Controller_Temp_Data : 0|16@1- (0.1,0.0) [0.0|4294967295.0] "degC"  Cluster,TCU
 
 BO_ 1024 Charger_Data: 8 OBC
  SG_ Charger_CAN : 53|1@1+ (1,0) [0.0|1.0] ""  BMS1,BMS2,TCU
@@ -850,10 +858,13 @@ CM_ SG_ 551 Cell_15_OCV "Estimated from measured cell voltage - cell15";
 CM_ SG_ 551 Cell_14_OCV "Estimated from measured cell voltage - cell14";
 CM_ SG_ 551 Cell_13_OCV "Estimated from measured cell voltage - cell13";
 CM_ BO_ 768 "";
+CM_ SG_ 768 MCU_High_Voltage_Err "";
+CM_ SG_ 768 MCU_Low_Voltage_Err "";
+CM_ SG_ 768 Throttle_Error "";
 CM_ SG_ 768 Motor_Over_Temperature "";
 CM_ SG_ 768 Motor_OvrSpeed "";
 CM_ SG_ 768 Motor_Unint_AccDeacc "";
-CM_ SG_ 768 Motor_Stall_Detection "";
+CM_ SG_ 768 Motor_Hall_Sensor_Error "";
 CM_ SG_ 768 Under_Voltage "";
 CM_ SG_ 768 Over_Voltage "";
 CM_ SG_ 768 MCU_Over_Temperature "";
@@ -862,6 +873,7 @@ CM_ SG_ 768 Open_Circuit "";
 CM_ SG_ 768 Short_Circuit "";
 CM_ BO_ 769 "";
 CM_ SG_ 769 Regen_State "";
+CM_ SG_ 769 Motor_RPM "";
 CM_ SG_ 769 Vehicle_Speed "";
 CM_ SG_ 769 BrakeSwitch_Status "";
 CM_ SG_ 769 SideStand_Status "";
@@ -870,6 +882,9 @@ CM_ SG_ 769 Drive_Modes "";
 CM_ BO_ 770 "";
 CM_ SG_ 770 Trip_Odo_Data "";
 CM_ SG_ 770 Vehicle_Odo_Data "";
+CM_ BO_ 771 "";
+CM_ SG_ 771 Motor_Temp_Data "";
+CM_ SG_ 771 Controller_Temp_Data "";
 CM_ BO_ 1024 "";
 CM_ SG_ 1024 Charger_CAN "";
 CM_ SG_ 1024 Charger_Start "";
@@ -940,6 +955,7 @@ BA_ "GenMsgCycleTime" BO_ 551 100;
 BA_ "GenMsgCycleTime" BO_ 768 100;
 BA_ "GenMsgCycleTime" BO_ 769 100;
 BA_ "GenMsgCycleTime" BO_ 770 100;
+BA_ "GenMsgCycleTime" BO_ 771 100;
 BA_ "GenMsgCycleTime" BO_ 1024 100;
 VAL_ 256 Unique_ID  ;
 VAL_ 256 SoC  ;
@@ -1227,10 +1243,13 @@ VAL_ 551 Cell_16_OCV  ;
 VAL_ 551 Cell_15_OCV  ;
 VAL_ 551 Cell_14_OCV  ;
 VAL_ 551 Cell_13_OCV  ;
+VAL_ 768 MCU_High_Voltage_Err  ;
+VAL_ 768 MCU_Low_Voltage_Err  ;
+VAL_ 768 Throttle_Error  ;
 VAL_ 768 Motor_Over_Temperature  ;
 VAL_ 768 Motor_OvrSpeed  ;
 VAL_ 768 Motor_Unint_AccDeacc  ;
-VAL_ 768 Motor_Stall_Detection  ;
+VAL_ 768 Motor_Hall_Sensor_Error  ;
 VAL_ 768 Under_Voltage  ;
 VAL_ 768 Over_Voltage  ;
 VAL_ 768 MCU_Over_Temperature  ;
@@ -1238,6 +1257,7 @@ VAL_ 768 Over_Current  ;
 VAL_ 768 Open_Circuit  ;
 VAL_ 768 Short_Circuit  ;
 VAL_ 769 Regen_State 0 "Regen_Off" 1 "Regen_On" ;
+VAL_ 769 Motor_RPM  ;
 VAL_ 769 Vehicle_Speed  ;
 VAL_ 769 BrakeSwitch_Status 0 "Brake_NotApplied" 1 "Brake_Applied" ;
 VAL_ 769 SideStand_Status 0 "SideStand_DisEngaged" 1 "SideStand_Engaged" ;
@@ -1245,6 +1265,8 @@ VAL_ 769 Charge_CutOff 0 "No_Charge_CutOff" 1 "Charge_CutOff" ;
 VAL_ 769 Drive_Modes 0 "Park" 1 "Mode_1" 2 "Mode_2" 3 "Mode_3" 4 "Reverse" ;
 VAL_ 770 Trip_Odo_Data  ;
 VAL_ 770 Vehicle_Odo_Data  ;
+VAL_ 771 Motor_Temp_Data  ;
+VAL_ 771 Controller_Temp_Data  ;
 VAL_ 1024 Charger_CAN 0 "Normal" 1 "Communication_TimeOut" ;
 VAL_ 1024 Charger_Start 0 "Normal" 1 "No_Load" ;
 VAL_ 1024 Charger_Ready 0 "Normal" 1 "Initilization_Exception" ;

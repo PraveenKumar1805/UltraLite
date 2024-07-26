@@ -781,10 +781,13 @@ void encode_MCU_Fault_Data(const MCU_Fault_Data_t* msg, uint8_t* data) {
     data[0] |= (msg->MCU_Over_Temperature & 0x1) << 3;
     data[0] |= (msg->Over_Voltage & 0x1) << 4;
     data[0] |= (msg->Under_Voltage & 0x1) << 5;
-    data[0] |= (msg->Motor_Stall_Detection & 0x1) << 6;
+    data[0] |= (msg->Motor_Hall_Sensor_Error & 0x1) << 6;
     data[0] |= (msg->Motor_Unint_AccDeacc & 0x1) << 7;
     data[1] |= (msg->Motor_OvrSpeed & 0x1) << 0;
     data[1] |= (msg->Motor_Over_Temperature & 0x1) << 1;
+    data[1] |= (msg->Throttle_Error & 0x1) << 2;
+    data[1] |= (msg->MCU_Low_Voltage_Err & 0x1) << 3;
+    data[1] |= (msg->MCU_High_Voltage_Err & 0x1) << 4;
 }
 
 /* MCU_Data */
@@ -798,9 +801,8 @@ void encode_MCU_Data(const MCU_Data_t* msg, uint8_t* data) {
     data[0] |= (msg->BrakeSwitch_Status & 0x1) << 6;
     data[1] |= (msg->Vehicle_Speed >> 0) & 0xFF;
     data[2] |= (msg->Vehicle_Speed >> 8) & 0xFF;
-    data[3] |= (msg->Vehicle_Speed >> 16) & 0xFF;
-    data[4] |= (msg->Vehicle_Speed >> 24) & 0xFF;
-    data[5] |= (msg->Regen_State & 0x1) << 0;
+    data[3] |= (msg->Motor_RPM & 0xFF) << 0;
+    data[4] |= (msg->Regen_State & 0x1) << 0;
 }
 
 /* MCU_Odo_Data */
@@ -810,12 +812,19 @@ void encode_MCU_Odo_Data(const MCU_Odo_Data_t* msg, uint8_t* data) {
     memset(data, 0, 8);
     data[0] |= (msg->Vehicle_Odo_Data >> 0) & 0xFF;
     data[1] |= (msg->Vehicle_Odo_Data >> 8) & 0xFF;
-    data[2] |= (msg->Vehicle_Odo_Data >> 16) & 0xFF;
-    data[3] |= (msg->Vehicle_Odo_Data >> 24) & 0xFF;
-    data[4] |= (msg->Trip_Odo_Data >> 0) & 0xFF;
-    data[5] |= (msg->Trip_Odo_Data >> 8) & 0xFF;
-    data[6] |= (msg->Trip_Odo_Data >> 16) & 0xFF;
-    data[7] |= (msg->Trip_Odo_Data >> 24) & 0xFF;
+    data[2] |= (msg->Trip_Odo_Data >> 0) & 0xFF;
+    data[3] |= (msg->Trip_Odo_Data >> 8) & 0xFF;
+}
+
+/* MCU_Temp_Data */
+#define MCU_TEMP_DATA_ID 0x303
+
+void encode_MCU_Temp_Data(const MCU_Temp_Data_t* msg, uint8_t* data) {
+    memset(data, 0, 8);
+    data[0] |= (msg->Controller_Temp_Data >> 0) & 0xFF;
+    data[1] |= (msg->Controller_Temp_Data >> 8) & 0xFF;
+    data[2] |= (msg->Motor_Temp_Data >> 0) & 0xFF;
+    data[3] |= (msg->Motor_Temp_Data >> 8) & 0xFF;
 }
 
 /* Charger_Data */

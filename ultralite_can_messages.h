@@ -62,6 +62,7 @@
 #define MCU_FAULT_DATA_ID 0x300
 #define MCU_DATA_ID 0x301
 #define MCU_ODO_DATA_ID 0x302
+#define MCU_TEMP_DATA_ID 0x303
 #define CHARGER_DATA_ID 0x400
 
 typedef struct {
@@ -525,10 +526,13 @@ typedef struct {
     uint8_t MCU_Over_Temperature : 1;
     uint8_t Over_Voltage : 1;
     uint8_t Under_Voltage : 1;
-    uint8_t Motor_Stall_Detection : 1;
+    uint8_t Motor_Hall_Sensor_Error : 1;
     uint8_t Motor_Unint_AccDeacc : 1;
     uint8_t Motor_OvrSpeed : 1;
     uint8_t Motor_Over_Temperature : 1;
+    uint8_t Throttle_Error : 1;
+    uint8_t MCU_Low_Voltage_Err : 1;
+    uint8_t MCU_High_Voltage_Err : 1;
 } MCU_Fault_Data_t;
 
 typedef struct {
@@ -536,14 +540,20 @@ typedef struct {
     uint8_t Charge_CutOff : 1;
     uint8_t SideStand_Status : 1;
     uint8_t BrakeSwitch_Status : 1;
-    uint32_t Vehicle_Speed : 32;
+    uint16_t Vehicle_Speed : 16;
+    uint8_t Motor_RPM : 8;
     uint8_t Regen_State : 1;
 } MCU_Data_t;
 
 typedef struct {
-    uint32_t Vehicle_Odo_Data : 32;
-    uint32_t Trip_Odo_Data : 32;
+    uint16_t Vehicle_Odo_Data : 16;
+    uint16_t Trip_Odo_Data : 16;
 } MCU_Odo_Data_t;
+
+typedef struct {
+    int16_t Controller_Temp_Data : 16;
+    int16_t Motor_Temp_Data : 16;
+} MCU_Temp_Data_t;
 
 typedef struct {
     uint16_t Charger_Out_Voltage : 16;
@@ -615,6 +625,7 @@ void encode_S_Battery_OCV_Data4(const S_Battery_OCV_Data4_t* msg, uint8_t* data)
 void encode_MCU_Fault_Data(const MCU_Fault_Data_t* msg, uint8_t* data);
 void encode_MCU_Data(const MCU_Data_t* msg, uint8_t* data);
 void encode_MCU_Odo_Data(const MCU_Odo_Data_t* msg, uint8_t* data);
+void encode_MCU_Temp_Data(const MCU_Temp_Data_t* msg, uint8_t* data);
 void encode_Charger_Data(const Charger_Data_t* msg, uint8_t* data);
 
 void decode_M_Data(const uint8_t* data, M_Data_t* msg);
@@ -676,6 +687,7 @@ void decode_S_Battery_OCV_Data4(const uint8_t* data, S_Battery_OCV_Data4_t* msg)
 void decode_MCU_Fault_Data(const uint8_t* data, MCU_Fault_Data_t* msg);
 void decode_MCU_Data(const uint8_t* data, MCU_Data_t* msg);
 void decode_MCU_Odo_Data(const uint8_t* data, MCU_Odo_Data_t* msg);
+void decode_MCU_Temp_Data(const uint8_t* data, MCU_Temp_Data_t* msg);
 void decode_Charger_Data(const uint8_t* data, Charger_Data_t* msg);
 
 #endif // CAN_MESSAGES_H
