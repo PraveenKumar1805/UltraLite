@@ -92,30 +92,23 @@ void encode_M_Max_Min_Cell_Voltage(const M_Max_Min_Cell_Voltage_t* msg, uint8_t*
     data[3] |= (msg->Min_Cell_Voltage >> 8) & 0xFF;
 }
 
-/* M_Battery_PDU_Temp_Data */
-#define M_BATTERY_PDU_TEMP_DATA_ID 0x106
+/* M_Battery_Temp_Data_1 */
+#define M_BATTERY_TEMP_DATA_1_ID 0x106
 
-void encode_M_Battery_PDU_Temp_Data(const M_Battery_PDU_Temp_Data_t* msg, uint8_t* data) {
+void encode_M_Battery_Temp_Data_1(const M_Battery_Temp_Data_1_t* msg, uint8_t* data) {
     memset(data, 0, 8);
     data[0] |= (msg->PDU_Temperature_AFE >> 0) & 0xFF;
     data[1] |= (msg->PDU_Temperature_AFE >> 8) & 0xFF;
     data[2] |= (msg->PDU_Temperature_BMS >> 0) & 0xFF;
     data[3] |= (msg->PDU_Temperature_BMS >> 8) & 0xFF;
-}
-
-/* M_Battery_Temp_Data_1 */
-#define M_BATTERY_TEMP_DATA_1_ID 0x107
-
-void encode_M_Battery_Temp_Data_1(const M_Battery_Temp_Data_1_t* msg, uint8_t* data) {
-    memset(data, 0, 8);
-    data[0] |= (msg->Balancing_Temperature_AFE >> 0) & 0xFF;
-    data[1] |= (msg->Balancing_Temperature_AFE >> 8) & 0xFF;
-    data[2] |= (msg->Battery_Pack_Effective_Temp >> 0) & 0xFF;
-    data[3] |= (msg->Battery_Pack_Effective_Temp >> 8) & 0xFF;
+    data[4] |= (msg->Balancing_Temperature_AFE >> 0) & 0xFF;
+    data[5] |= (msg->Balancing_Temperature_AFE >> 8) & 0xFF;
+    data[6] |= (msg->Battery_Pack_Effective_Temp >> 0) & 0xFF;
+    data[7] |= (msg->Battery_Pack_Effective_Temp >> 8) & 0xFF;
 }
 
 /* M_Battery_Temp_Data_2 */
-#define M_BATTERY_TEMP_DATA_2_ID 0x108
+#define M_BATTERY_TEMP_DATA_2_ID 0x107
 
 void encode_M_Battery_Temp_Data_2(const M_Battery_Temp_Data_2_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -123,21 +116,14 @@ void encode_M_Battery_Temp_Data_2(const M_Battery_Temp_Data_2_t* msg, uint8_t* d
     data[1] |= (msg->Battery_Pack_Temp_Sensor_1 >> 8) & 0xFF;
     data[2] |= (msg->Battery_Pack_Temp_Sensor_2 >> 0) & 0xFF;
     data[3] |= (msg->Battery_Pack_Temp_Sensor_2 >> 8) & 0xFF;
-}
-
-/* M_Battery_Temp_Data_3 */
-#define M_BATTERY_TEMP_DATA_3_ID 0x109
-
-void encode_M_Battery_Temp_Data_3(const M_Battery_Temp_Data_3_t* msg, uint8_t* data) {
-    memset(data, 0, 8);
-    data[0] |= (msg->Battery_Pack_Temp_Sensor_3 >> 0) & 0xFF;
-    data[1] |= (msg->Battery_Pack_Temp_Sensor_3 >> 8) & 0xFF;
-    data[2] |= (msg->Battery_Pack_Temp_Sensor_4 >> 0) & 0xFF;
-    data[3] |= (msg->Battery_Pack_Temp_Sensor_4 >> 8) & 0xFF;
+    data[4] |= (msg->Battery_Pack_Temp_Sensor_3 >> 0) & 0xFF;
+    data[5] |= (msg->Battery_Pack_Temp_Sensor_3 >> 8) & 0xFF;
+    data[6] |= (msg->Battery_Pack_Temp_Sensor_4 >> 0) & 0xFF;
+    data[7] |= (msg->Battery_Pack_Temp_Sensor_4 >> 8) & 0xFF;
 }
 
 /* M_BMS_Status_Data_1 */
-#define M_BMS_STATUS_DATA_1_ID 0x110
+#define M_BMS_STATUS_DATA_1_ID 0x108
 
 void encode_M_BMS_Status_Data_1(const M_BMS_Status_Data_1_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -178,30 +164,23 @@ void encode_M_BMS_Status_Data_1(const M_BMS_Status_Data_1_t* msg, uint8_t* data)
     data[4] |= (msg->Cell16_Balancing_Status & 0x1) << 2;
 }
 
-/* M_Current_Limit_Data */
-#define M_CURRENT_LIMIT_DATA_ID 0x111
+/* M_Battery_Pack_V_I */
+#define M_BATTERY_PACK_V_I_ID 0x109
 
-void encode_M_Current_Limit_Data(const M_Current_Limit_Data_t* msg, uint8_t* data) {
+void encode_M_Battery_Pack_V_I(const M_Battery_Pack_V_I_t* msg, uint8_t* data) {
     memset(data, 0, 8);
     data[0] |= (msg->Discharge_Current_Limit >> 0) & 0xFF;
     data[1] |= (msg->Discharge_Current_Limit >> 8) & 0xFF;
     data[2] |= (msg->Regenerative_Current_Limit >> 0) & 0xFF;
     data[3] |= (msg->Regenerative_Current_Limit >> 8) & 0xFF;
-}
-
-/* M_Battery_Pack_V_I */
-#define M_BATTERY_PACK_V_I_ID 0x112
-
-void encode_M_Battery_Pack_V_I(const M_Battery_Pack_V_I_t* msg, uint8_t* data) {
-    memset(data, 0, 8);
-    data[0] |= (msg->Battery_Pack_Current >> 0) & 0xFF;
-    data[1] |= (msg->Battery_Pack_Current >> 8) & 0xFF;
-    data[2] |= (msg->Battery_Pack_Voltage >> 0) & 0xFF;
-    data[3] |= (msg->Battery_Pack_Voltage >> 8) & 0xFF;
+    data[4] |= (msg->Battery_Pack_Current >> 0) & 0xFF;
+    data[5] |= (msg->Battery_Pack_Current >> 8) & 0xFF;
+    data[6] |= (msg->Battery_Pack_Voltage >> 0) & 0xFF;
+    data[7] |= (msg->Battery_Pack_Voltage >> 8) & 0xFF;
 }
 
 /* M_Battery_Data_1 */
-#define M_BATTERY_DATA_1_ID 0x113
+#define M_BATTERY_DATA_1_ID 0x110
 
 void encode_M_Battery_Data_1(const M_Battery_Data_1_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -209,12 +188,14 @@ void encode_M_Battery_Data_1(const M_Battery_Data_1_t* msg, uint8_t* data) {
     data[1] |= (msg->SoC >> 8) & 0xFF;
     data[2] |= (msg->SoH >> 0) & 0xFF;
     data[3] |= (msg->SoH >> 8) & 0xFF;
-    data[4] |= (msg->Battery_Current_AFE >> 0) & 0xFF;
-    data[5] |= (msg->Battery_Current_AFE >> 8) & 0xFF;
+    data[4] |= (msg->Bus_Voltage >> 0) & 0xFF;
+    data[5] |= (msg->Bus_Voltage >> 8) & 0xFF;
+    data[6] |= (msg->Time_To_Charge >> 0) & 0xFF;
+    data[7] |= (msg->Time_To_Charge >> 8) & 0xFF;
 }
 
 /* M_Battery_Data_2 */
-#define M_BATTERY_DATA_2_ID 0x114
+#define M_BATTERY_DATA_2_ID 0x111
 
 void encode_M_Battery_Data_2(const M_Battery_Data_2_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -224,11 +205,12 @@ void encode_M_Battery_Data_2(const M_Battery_Data_2_t* msg, uint8_t* data) {
     data[3] |= (msg->Cycle_Number >> 8) & 0xFF;
     data[4] |= (msg->AmpHr_Accumulated >> 0) & 0xFF;
     data[5] |= (msg->AmpHr_Accumulated >> 8) & 0xFF;
-    data[6] |= (msg->KwHr_Accumulated & 0xF) << 0;
+    data[6] |= (msg->KwHr_Accumulated >> 0) & 0xFF;
+    data[7] |= (msg->KwHr_Accumulated >> 8) & 0xFF;
 }
 
 /* M_Battery_IR_Data_1 */
-#define M_BATTERY_IR_DATA_1_ID 0x115
+#define M_BATTERY_IR_DATA_1_ID 0x112
 
 void encode_M_Battery_IR_Data_1(const M_Battery_IR_Data_1_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -243,7 +225,7 @@ void encode_M_Battery_IR_Data_1(const M_Battery_IR_Data_1_t* msg, uint8_t* data)
 }
 
 /* M_Battery_IR_Data_2 */
-#define M_BATTERY_IR_DATA_2_ID 0x116
+#define M_BATTERY_IR_DATA_2_ID 0x113
 
 void encode_M_Battery_IR_Data_2(const M_Battery_IR_Data_2_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -258,7 +240,7 @@ void encode_M_Battery_IR_Data_2(const M_Battery_IR_Data_2_t* msg, uint8_t* data)
 }
 
 /* M_Battery_IR_Data_3 */
-#define M_BATTERY_IR_DATA_3_ID 0x117
+#define M_BATTERY_IR_DATA_3_ID 0x114
 
 void encode_M_Battery_IR_Data_3(const M_Battery_IR_Data_3_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -273,7 +255,7 @@ void encode_M_Battery_IR_Data_3(const M_Battery_IR_Data_3_t* msg, uint8_t* data)
 }
 
 /* M_Battery_IR_Data_4 */
-#define M_BATTERY_IR_DATA_4_ID 0x118
+#define M_BATTERY_IR_DATA_4_ID 0x115
 
 void encode_M_Battery_IR_Data_4(const M_Battery_IR_Data_4_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -288,7 +270,7 @@ void encode_M_Battery_IR_Data_4(const M_Battery_IR_Data_4_t* msg, uint8_t* data)
 }
 
 /* M_Battery_Charging_Data_1 */
-#define M_BATTERY_CHARGING_DATA_1_ID 0x119
+#define M_BATTERY_CHARGING_DATA_1_ID 0x116
 
 void encode_M_Battery_Charging_Data_1(const M_Battery_Charging_Data_1_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -299,10 +281,10 @@ void encode_M_Battery_Charging_Data_1(const M_Battery_Charging_Data_1_t* msg, ui
     data[4] |= (msg->Charge_Demand_Current >> 8) & 0xFF;
 }
 
-/* M_Battery_Data_3 */
-#define M_BATTERY_DATA_3_ID 0x120
+/* M_RTC_Date */
+#define M_RTC_DATE_ID 0x117
 
-void encode_M_Battery_Data_3(const M_Battery_Data_3_t* msg, uint8_t* data) {
+void encode_M_RTC_Date(const M_RTC_Date_t* msg, uint8_t* data) {
     memset(data, 0, 8);
     data[0] |= (msg->RTC_Date >> 0) & 0xFF;
     data[1] |= (msg->RTC_Date >> 8) & 0xFF;
@@ -310,14 +292,12 @@ void encode_M_Battery_Data_3(const M_Battery_Data_3_t* msg, uint8_t* data) {
     data[3] |= (msg->RTC_Date >> 24) & 0xFF;
     data[4] |= (msg->RTC_Date >> 32) & 0xFF;
     data[5] |= (msg->RTC_Date >> 40) & 0xFF;
-    data[6] |= (msg->Bus_Voltage >> 0) & 0xFF;
-    data[7] |= (msg->Bus_Voltage >> 8) & 0xFF;
 }
 
-/* M_Battery_Data_4 */
-#define M_BATTERY_DATA_4_ID 0x121
+/* M_RTC_Time */
+#define M_RTC_TIME_ID 0x118
 
-void encode_M_Battery_Data_4(const M_Battery_Data_4_t* msg, uint8_t* data) {
+void encode_M_RTC_Time(const M_RTC_Time_t* msg, uint8_t* data) {
     memset(data, 0, 8);
     data[0] |= (msg->RTC_Time >> 0) & 0xFF;
     data[1] |= (msg->RTC_Time >> 8) & 0xFF;
@@ -325,12 +305,10 @@ void encode_M_Battery_Data_4(const M_Battery_Data_4_t* msg, uint8_t* data) {
     data[3] |= (msg->RTC_Time >> 24) & 0xFF;
     data[4] |= (msg->RTC_Time >> 32) & 0xFF;
     data[5] |= (msg->RTC_Time >> 40) & 0xFF;
-    data[6] |= (msg->Time_To_Charge >> 0) & 0xFF;
-    data[7] |= (msg->Time_To_Charge >> 8) & 0xFF;
 }
 
 /* M_Battery_OCV_Data1 */
-#define M_BATTERY_OCV_DATA1_ID 0x124
+#define M_BATTERY_OCV_DATA1_ID 0x121
 
 void encode_M_Battery_OCV_Data1(const M_Battery_OCV_Data1_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -345,7 +323,7 @@ void encode_M_Battery_OCV_Data1(const M_Battery_OCV_Data1_t* msg, uint8_t* data)
 }
 
 /* M_Battery_OCV_Data2 */
-#define M_BATTERY_OCV_DATA2_ID 0x125
+#define M_BATTERY_OCV_DATA2_ID 0x122
 
 void encode_M_Battery_OCV_Data2(const M_Battery_OCV_Data2_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -360,7 +338,7 @@ void encode_M_Battery_OCV_Data2(const M_Battery_OCV_Data2_t* msg, uint8_t* data)
 }
 
 /* M_Battery_OCV_Data3 */
-#define M_BATTERY_OCV_DATA3_ID 0x126
+#define M_BATTERY_OCV_DATA3_ID 0x123
 
 void encode_M_Battery_OCV_Data3(const M_Battery_OCV_Data3_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -375,7 +353,7 @@ void encode_M_Battery_OCV_Data3(const M_Battery_OCV_Data3_t* msg, uint8_t* data)
 }
 
 /* M_Battery_OCV_Data4 */
-#define M_BATTERY_OCV_DATA4_ID 0x127
+#define M_BATTERY_OCV_DATA4_ID 0x124
 
 void encode_M_Battery_OCV_Data4(const M_Battery_OCV_Data4_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -484,21 +462,14 @@ void encode_S_Battery_PDU_Temp_Data(const S_Battery_PDU_Temp_Data_t* msg, uint8_
     data[1] |= (msg->PDU_Temperature_AFE >> 8) & 0xFF;
     data[2] |= (msg->PDU_Temperature_BMS >> 0) & 0xFF;
     data[3] |= (msg->PDU_Temperature_BMS >> 8) & 0xFF;
-}
-
-/* S_Battery_Temp_Data_1 */
-#define S_BATTERY_TEMP_DATA_1_ID 0x207
-
-void encode_S_Battery_Temp_Data_1(const S_Battery_Temp_Data_1_t* msg, uint8_t* data) {
-    memset(data, 0, 8);
-    data[0] |= (msg->Balancing_Temperature_AFE >> 0) & 0xFF;
-    data[1] |= (msg->Balancing_Temperature_AFE >> 8) & 0xFF;
-    data[2] |= (msg->Battery_Pack_Effective_Temp >> 0) & 0xFF;
-    data[3] |= (msg->Battery_Pack_Effective_Temp >> 8) & 0xFF;
+    data[4] |= (msg->Balancing_Temperature_AFE >> 0) & 0xFF;
+    data[5] |= (msg->Balancing_Temperature_AFE >> 8) & 0xFF;
+    data[6] |= (msg->Battery_Pack_Effective_Temp >> 0) & 0xFF;
+    data[7] |= (msg->Battery_Pack_Effective_Temp >> 8) & 0xFF;
 }
 
 /* S_Battery_Temp_Data_2 */
-#define S_BATTERY_TEMP_DATA_2_ID 0x208
+#define S_BATTERY_TEMP_DATA_2_ID 0x207
 
 void encode_S_Battery_Temp_Data_2(const S_Battery_Temp_Data_2_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -506,21 +477,14 @@ void encode_S_Battery_Temp_Data_2(const S_Battery_Temp_Data_2_t* msg, uint8_t* d
     data[1] |= (msg->Battery_Pack_Temp_Sensor_1 >> 8) & 0xFF;
     data[2] |= (msg->Battery_Pack_Temp_Sensor_2 >> 0) & 0xFF;
     data[3] |= (msg->Battery_Pack_Temp_Sensor_2 >> 8) & 0xFF;
-}
-
-/* S_Battery_Temp_Data_3 */
-#define S_BATTERY_TEMP_DATA_3_ID 0x209
-
-void encode_S_Battery_Temp_Data_3(const S_Battery_Temp_Data_3_t* msg, uint8_t* data) {
-    memset(data, 0, 8);
-    data[0] |= (msg->Battery_Pack_Temp_Sensor_3 >> 0) & 0xFF;
-    data[1] |= (msg->Battery_Pack_Temp_Sensor_3 >> 8) & 0xFF;
-    data[2] |= (msg->Battery_Pack_Temp_Sensor_4 >> 0) & 0xFF;
-    data[3] |= (msg->Battery_Pack_Temp_Sensor_4 >> 8) & 0xFF;
+    data[4] |= (msg->Battery_Pack_Temp_Sensor_3 >> 0) & 0xFF;
+    data[5] |= (msg->Battery_Pack_Temp_Sensor_3 >> 8) & 0xFF;
+    data[6] |= (msg->Battery_Pack_Temp_Sensor_4 >> 0) & 0xFF;
+    data[7] |= (msg->Battery_Pack_Temp_Sensor_4 >> 8) & 0xFF;
 }
 
 /* S_BMS_Status_Data_1 */
-#define S_BMS_STATUS_DATA_1_ID 0x210
+#define S_BMS_STATUS_DATA_1_ID 0x208
 
 void encode_S_BMS_Status_Data_1(const S_BMS_Status_Data_1_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -561,28 +525,23 @@ void encode_S_BMS_Status_Data_1(const S_BMS_Status_Data_1_t* msg, uint8_t* data)
     data[4] |= (msg->Cell16_Balancing_Status & 0x1) << 2;
 }
 
-/* S_Current_Limit_Data */
-#define S_CURRENT_LIMIT_DATA_ID 0x211
-
-void encode_S_Current_Limit_Data(const S_Current_Limit_Data_t* msg, uint8_t* data) {
-    memset(data, 0, 8);
-    data[0] |= (msg->Discharge_Current_Limit >> 0) & 0xFF;
-    data[1] |= (msg->Discharge_Current_Limit >> 8) & 0xFF;
-}
-
 /* S_Battery_Pack_V_I */
-#define S_BATTERY_PACK_V_I_ID 0x212
+#define S_BATTERY_PACK_V_I_ID 0x209
 
 void encode_S_Battery_Pack_V_I(const S_Battery_Pack_V_I_t* msg, uint8_t* data) {
     memset(data, 0, 8);
-    data[0] |= (msg->Battery_Pack_Current >> 0) & 0xFF;
-    data[1] |= (msg->Battery_Pack_Current >> 8) & 0xFF;
-    data[2] |= (msg->Battery_Pack_Voltage >> 0) & 0xFF;
-    data[3] |= (msg->Battery_Pack_Voltage >> 8) & 0xFF;
+    data[0] |= (msg->Discharge_Current_Limit >> 0) & 0xFF;
+    data[1] |= (msg->Discharge_Current_Limit >> 8) & 0xFF;
+    data[2] |= (msg->Regenerative_Current_Limit >> 0) & 0xFF;
+    data[3] |= (msg->Regenerative_Current_Limit >> 8) & 0xFF;
+    data[4] |= (msg->Battery_Pack_Current >> 0) & 0xFF;
+    data[5] |= (msg->Battery_Pack_Current >> 8) & 0xFF;
+    data[6] |= (msg->Battery_Pack_Voltage >> 0) & 0xFF;
+    data[7] |= (msg->Battery_Pack_Voltage >> 8) & 0xFF;
 }
 
 /* S_Battery_Data_1 */
-#define S_BATTERY_DATA_1_ID 0x213
+#define S_BATTERY_DATA_1_ID 0x210
 
 void encode_S_Battery_Data_1(const S_Battery_Data_1_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -590,12 +549,14 @@ void encode_S_Battery_Data_1(const S_Battery_Data_1_t* msg, uint8_t* data) {
     data[1] |= (msg->SoC >> 8) & 0xFF;
     data[2] |= (msg->SoH >> 0) & 0xFF;
     data[3] |= (msg->SoH >> 8) & 0xFF;
-    data[4] |= (msg->Battery_Current_AFE >> 0) & 0xFF;
-    data[5] |= (msg->Battery_Current_AFE >> 8) & 0xFF;
+    data[4] |= (msg->Bus_Voltage >> 0) & 0xFF;
+    data[5] |= (msg->Bus_Voltage >> 8) & 0xFF;
+    data[6] |= (msg->Time_To_Charge >> 0) & 0xFF;
+    data[7] |= (msg->Time_To_Charge >> 8) & 0xFF;
 }
 
 /* S_Battery_Data_2 */
-#define S_BATTERY_DATA_2_ID 0x214
+#define S_BATTERY_DATA_2_ID 0x211
 
 void encode_S_Battery_Data_2(const S_Battery_Data_2_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -605,11 +566,12 @@ void encode_S_Battery_Data_2(const S_Battery_Data_2_t* msg, uint8_t* data) {
     data[3] |= (msg->Cycle_Number >> 8) & 0xFF;
     data[4] |= (msg->AmpHr_Accumulated >> 0) & 0xFF;
     data[5] |= (msg->AmpHr_Accumulated >> 8) & 0xFF;
-    data[6] |= (msg->KwHr_Accumulated & 0xF) << 0;
+    data[6] |= (msg->KwHr_Accumulated >> 0) & 0xFF;
+    data[7] |= (msg->KwHr_Accumulated >> 8) & 0xFF;
 }
 
 /* S_Battery_IR_Data_1 */
-#define S_BATTERY_IR_DATA_1_ID 0x215
+#define S_BATTERY_IR_DATA_1_ID 0x212
 
 void encode_S_Battery_IR_Data_1(const S_Battery_IR_Data_1_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -624,7 +586,7 @@ void encode_S_Battery_IR_Data_1(const S_Battery_IR_Data_1_t* msg, uint8_t* data)
 }
 
 /* S_Battery_IR_Data_2 */
-#define S_BATTERY_IR_DATA_2_ID 0x216
+#define S_BATTERY_IR_DATA_2_ID 0x213
 
 void encode_S_Battery_IR_Data_2(const S_Battery_IR_Data_2_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -639,7 +601,7 @@ void encode_S_Battery_IR_Data_2(const S_Battery_IR_Data_2_t* msg, uint8_t* data)
 }
 
 /* S_Battery_IR_Data_3 */
-#define S_BATTERY_IR_DATA_3_ID 0x217
+#define S_BATTERY_IR_DATA_3_ID 0x214
 
 void encode_S_Battery_IR_Data_3(const S_Battery_IR_Data_3_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -654,7 +616,7 @@ void encode_S_Battery_IR_Data_3(const S_Battery_IR_Data_3_t* msg, uint8_t* data)
 }
 
 /* S_Battery_IR_Data_4 */
-#define S_BATTERY_IR_DATA_4_ID 0x218
+#define S_BATTERY_IR_DATA_4_ID 0x215
 
 void encode_S_Battery_IR_Data_4(const S_Battery_IR_Data_4_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -669,7 +631,7 @@ void encode_S_Battery_IR_Data_4(const S_Battery_IR_Data_4_t* msg, uint8_t* data)
 }
 
 /* S_Battery_Charging_Data_1 */
-#define S_BATTERY_CHARGING_DATA_1_ID 0x219
+#define S_BATTERY_CHARGING_DATA_1_ID 0x216
 
 void encode_S_Battery_Charging_Data_1(const S_Battery_Charging_Data_1_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -681,7 +643,7 @@ void encode_S_Battery_Charging_Data_1(const S_Battery_Charging_Data_1_t* msg, ui
 }
 
 /* S_Battery_Data_3 */
-#define S_BATTERY_DATA_3_ID 0x220
+#define S_BATTERY_DATA_3_ID 0x217
 
 void encode_S_Battery_Data_3(const S_Battery_Data_3_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -691,12 +653,10 @@ void encode_S_Battery_Data_3(const S_Battery_Data_3_t* msg, uint8_t* data) {
     data[3] |= (msg->RTC_Date >> 24) & 0xFF;
     data[4] |= (msg->RTC_Date >> 32) & 0xFF;
     data[5] |= (msg->RTC_Date >> 40) & 0xFF;
-    data[6] |= (msg->Bus_Voltage >> 0) & 0xFF;
-    data[7] |= (msg->Bus_Voltage >> 8) & 0xFF;
 }
 
 /* S_Battery_Data_4 */
-#define S_BATTERY_DATA_4_ID 0x221
+#define S_BATTERY_DATA_4_ID 0x218
 
 void encode_S_Battery_Data_4(const S_Battery_Data_4_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -706,12 +666,10 @@ void encode_S_Battery_Data_4(const S_Battery_Data_4_t* msg, uint8_t* data) {
     data[3] |= (msg->RTC_Time >> 24) & 0xFF;
     data[4] |= (msg->RTC_Time >> 32) & 0xFF;
     data[5] |= (msg->RTC_Time >> 40) & 0xFF;
-    data[6] |= (msg->Time_To_Charge >> 0) & 0xFF;
-    data[7] |= (msg->Time_To_Charge >> 8) & 0xFF;
 }
 
 /* S_Battery_OCV_Data1 */
-#define S_BATTERY_OCV_DATA1_ID 0x224
+#define S_BATTERY_OCV_DATA1_ID 0x221
 
 void encode_S_Battery_OCV_Data1(const S_Battery_OCV_Data1_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -726,7 +684,7 @@ void encode_S_Battery_OCV_Data1(const S_Battery_OCV_Data1_t* msg, uint8_t* data)
 }
 
 /* S_Battery_OCV_Data2 */
-#define S_BATTERY_OCV_DATA2_ID 0x225
+#define S_BATTERY_OCV_DATA2_ID 0x222
 
 void encode_S_Battery_OCV_Data2(const S_Battery_OCV_Data2_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -741,7 +699,7 @@ void encode_S_Battery_OCV_Data2(const S_Battery_OCV_Data2_t* msg, uint8_t* data)
 }
 
 /* S_Battery_OCV_Data3 */
-#define S_BATTERY_OCV_DATA3_ID 0x226
+#define S_BATTERY_OCV_DATA3_ID 0x223
 
 void encode_S_Battery_OCV_Data3(const S_Battery_OCV_Data3_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -756,18 +714,10 @@ void encode_S_Battery_OCV_Data3(const S_Battery_OCV_Data3_t* msg, uint8_t* data)
 }
 
 /* S_Battery_OCV_Data4 */
-#define S_BATTERY_OCV_DATA4_ID 0x227
+#define S_BATTERY_OCV_DATA4_ID 0x224
 
 void encode_S_Battery_OCV_Data4(const S_Battery_OCV_Data4_t* msg, uint8_t* data) {
     memset(data, 0, 8);
-    data[0] |= (msg->Cell_13_OCV >> 0) & 0xFF;
-    data[1] |= (msg->Cell_13_OCV >> 8) & 0xFF;
-    data[2] |= (msg->Cell_14_OCV >> 0) & 0xFF;
-    data[3] |= (msg->Cell_14_OCV >> 8) & 0xFF;
-    data[4] |= (msg->Cell_15_OCV >> 0) & 0xFF;
-    data[5] |= (msg->Cell_15_OCV >> 8) & 0xFF;
-    data[6] |= (msg->Cell_16_OCV >> 0) & 0xFF;
-    data[7] |= (msg->Cell_16_OCV >> 8) & 0xFF;
 }
 
 /* MCU_Fault_Data */
@@ -799,10 +749,11 @@ void encode_MCU_Data(const MCU_Data_t* msg, uint8_t* data) {
     data[0] |= (msg->Charge_CutOff & 0x1) << 4;
     data[0] |= (msg->SideStand_Status & 0x1) << 5;
     data[0] |= (msg->BrakeSwitch_Status & 0x1) << 6;
+    data[0] |= (msg->Regen_State & 0x1) << 7;
     data[1] |= (msg->Vehicle_Speed >> 0) & 0xFF;
     data[2] |= (msg->Vehicle_Speed >> 8) & 0xFF;
-    data[3] |= (msg->Motor_RPM & 0xFF) << 0;
-    data[4] |= (msg->Regen_State & 0x1) << 0;
+    data[3] |= (msg->Motor_RPM >> 0) & 0xFF;
+    data[4] |= (msg->Motor_RPM >> 8) & 0xFF;
 }
 
 /* MCU_Odo_Data */
@@ -812,8 +763,12 @@ void encode_MCU_Odo_Data(const MCU_Odo_Data_t* msg, uint8_t* data) {
     memset(data, 0, 8);
     data[0] |= (msg->Vehicle_Odo_Data >> 0) & 0xFF;
     data[1] |= (msg->Vehicle_Odo_Data >> 8) & 0xFF;
-    data[2] |= (msg->Trip_Odo_Data >> 0) & 0xFF;
-    data[3] |= (msg->Trip_Odo_Data >> 8) & 0xFF;
+    data[2] |= (msg->Vehicle_Odo_Data >> 16) & 0xFF;
+    data[3] |= (msg->Vehicle_Odo_Data >> 24) & 0xFF;
+    data[4] |= (msg->Trip_Odo_Data >> 0) & 0xFF;
+    data[5] |= (msg->Trip_Odo_Data >> 8) & 0xFF;
+    data[6] |= (msg->Trip_Odo_Data >> 16) & 0xFF;
+    data[7] |= (msg->Trip_Odo_Data >> 24) & 0xFF;
 }
 
 /* MCU_Temp_Data */
@@ -836,21 +791,19 @@ void encode_Charger_Data(const Charger_Data_t* msg, uint8_t* data) {
     data[1] |= (msg->Charger_Out_Voltage >> 8) & 0xFF;
     data[2] |= (msg->Charger_Out_Current >> 0) & 0xFF;
     data[3] |= (msg->Charger_Out_Current >> 8) & 0xFF;
-    data[4] |= (msg->Charger_Out_Current >> 16) & 0xFF;
-    data[5] |= (msg->Charger_Out_Current >> 24) & 0xFF;
-    data[6] |= (msg->Charger_Hardware & 0x1) << 0;
-    data[6] |= (msg->Charger_OverTemp & 0x1) << 1;
-    data[6] |= (msg->Charger_Input & 0x1) << 2;
-    data[6] |= (msg->Charger_Ready & 0x1) << 3;
-    data[6] |= (msg->Charger_Start & 0x1) << 4;
-    data[6] |= (msg->Charger_CAN & 0x1) << 5;
+    data[4] |= (msg->Charger_Hardware & 0x1) << 0;
+    data[4] |= (msg->Charger_OverTemp & 0x1) << 1;
+    data[4] |= (msg->Charger_Input & 0x1) << 2;
+    data[4] |= (msg->Charger_Ready & 0x1) << 3;
+    data[4] |= (msg->Charger_Start & 0x1) << 4;
+    data[4] |= (msg->Charger_CAN & 0x1) << 5;
 }
 
 
 /* Messages with cycle time 10 ms */
 
 /* M_Battery_Data_5 */
-#define M_BATTERY_DATA_5_ID 0x122
+#define M_BATTERY_DATA_5_ID 0x119
 
 void encode_M_Battery_Data_5(const M_Battery_Data_5_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -862,7 +815,7 @@ void encode_M_Battery_Data_5(const M_Battery_Data_5_t* msg, uint8_t* data) {
 }
 
 /* S_Battery_Data_5 */
-#define S_BATTERY_DATA_5_ID 0x222
+#define S_BATTERY_DATA_5_ID 0x219
 
 void encode_S_Battery_Data_5(const S_Battery_Data_5_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -877,7 +830,7 @@ void encode_S_Battery_Data_5(const S_Battery_Data_5_t* msg, uint8_t* data) {
 /* Messages with cycle time 200 ms */
 
 /* M_Battery_Fault_Data */
-#define M_BATTERY_FAULT_DATA_ID 0x123
+#define M_BATTERY_FAULT_DATA_ID 0x120
 
 void encode_M_Battery_Fault_Data(const M_Battery_Fault_Data_t* msg, uint8_t* data) {
     memset(data, 0, 8);
@@ -909,7 +862,7 @@ void encode_M_Battery_Fault_Data(const M_Battery_Fault_Data_t* msg, uint8_t* dat
 }
 
 /* S_Battery_Fault_Data */
-#define S_BATTERY_FAULT_DATA_ID 0x223
+#define S_BATTERY_FAULT_DATA_ID 0x220
 
 void encode_S_Battery_Fault_Data(const S_Battery_Fault_Data_t* msg, uint8_t* data) {
     memset(data, 0, 8);
