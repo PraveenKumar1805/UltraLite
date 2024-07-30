@@ -9,25 +9,28 @@
 #define M_BATTERY_VOLTAGE_DATA3_ID 0x103
 #define M_BATTERY_VOLTAGE_DATA4_ID 0x104
 #define M_MAX_MIN_CELL_VOLTAGE_ID 0x105
-#define M_BATTERY_TEMP_DATA_1_ID 0x106
-#define M_BATTERY_TEMP_DATA_2_ID 0x107
-#define M_BMS_STATUS_DATA_1_ID 0x108
-#define M_BATTERY_PACK_V_I_ID 0x109
-#define M_BATTERY_DATA_1_ID 0x110
-#define M_BATTERY_DATA_2_ID 0x111
-#define M_BATTERY_IR_DATA_1_ID 0x112
-#define M_BATTERY_IR_DATA_2_ID 0x113
-#define M_BATTERY_IR_DATA_3_ID 0x114
-#define M_BATTERY_IR_DATA_4_ID 0x115
-#define M_BATTERY_CHARGING_DATA_1_ID 0x116
-#define M_RTC_DATE_ID 0x117
-#define M_RTC_TIME_ID 0x118
-#define M_BATTERY_DATA_5_ID 0x119
-#define M_BATTERY_FAULT_DATA_ID 0x120
-#define M_BATTERY_OCV_DATA1_ID 0x121
-#define M_BATTERY_OCV_DATA2_ID 0x122
-#define M_BATTERY_OCV_DATA3_ID 0x123
-#define M_BATTERY_OCV_DATA4_ID 0x124
+#define M_BATTERY_PDU_TEMP_DATA_ID 0x106
+#define M_BATTERY_TEMP_DATA_1_ID 0x107
+#define M_BATTERY_TEMP_DATA_2_ID 0x108
+#define M_BATTERY_TEMP_DATA_3_ID 0x109
+#define M_BMS_STATUS_DATA_1_ID 0x110
+#define M_CURRENT_LIMIT_DATA_ID 0x111
+#define M_BATTERY_PACK_V_I_ID 0x112
+#define M_BATTERY_DATA_1_ID 0x113
+#define M_BATTERY_DATA_2_ID 0x114
+#define M_BATTERY_IR_DATA_1_ID 0x115
+#define M_BATTERY_IR_DATA_2_ID 0x116
+#define M_BATTERY_IR_DATA_3_ID 0x117
+#define M_BATTERY_IR_DATA_4_ID 0x118
+#define M_BATTERY_CHARGING_DATA_1_ID 0x119
+#define M_BATTERY_DATA_3_ID 0x120
+#define M_BATTERY_DATA_4_ID 0x121
+#define M_BATTERY_DATA_5_ID 0x122
+#define M_BATTERY_FAULT_DATA_ID 0x123
+#define M_BATTERY_OCV_DATA1_ID 0x124
+#define M_BATTERY_OCV_DATA2_ID 0x125
+#define M_BATTERY_OCV_DATA3_ID 0x126
+#define M_BATTERY_OCV_DATA4_ID 0x127
 #define S_DATA_ID 0x200
 #define S_BATTERY_VOLTAGE_DATA1_ID 0x201
 #define S_BATTERY_VOLTAGE_DATA2_ID 0x202
@@ -35,24 +38,27 @@
 #define S_BATTERY_VOLTAGE_DATA4_ID 0x204
 #define S_MAX_MIN_CELL_VOLTAGE_ID 0x205
 #define S_BATTERY_PDU_TEMP_DATA_ID 0x206
-#define S_BATTERY_TEMP_DATA_2_ID 0x207
-#define S_BMS_STATUS_DATA_1_ID 0x208
-#define S_BATTERY_PACK_V_I_ID 0x209
-#define S_BATTERY_DATA_1_ID 0x210
-#define S_BATTERY_DATA_2_ID 0x211
-#define S_BATTERY_IR_DATA_1_ID 0x212
-#define S_BATTERY_IR_DATA_2_ID 0x213
-#define S_BATTERY_IR_DATA_3_ID 0x214
-#define S_BATTERY_IR_DATA_4_ID 0x215
-#define S_BATTERY_CHARGING_DATA_1_ID 0x216
-#define S_BATTERY_DATA_3_ID 0x217
-#define S_BATTERY_DATA_4_ID 0x218
-#define S_BATTERY_DATA_5_ID 0x219
-#define S_BATTERY_FAULT_DATA_ID 0x220
-#define S_BATTERY_OCV_DATA1_ID 0x221
-#define S_BATTERY_OCV_DATA2_ID 0x222
-#define S_BATTERY_OCV_DATA3_ID 0x223
-#define S_BATTERY_OCV_DATA4_ID 0x224
+#define S_BATTERY_TEMP_DATA_1_ID 0x207
+#define S_BATTERY_TEMP_DATA_2_ID 0x208
+#define S_BATTERY_TEMP_DATA_3_ID 0x209
+#define S_BMS_STATUS_DATA_1_ID 0x210
+#define S_CURRENT_LIMIT_DATA_ID 0x211
+#define S_BATTERY_PACK_V_I_ID 0x212
+#define S_BATTERY_DATA_1_ID 0x213
+#define S_BATTERY_DATA_2_ID 0x214
+#define S_BATTERY_IR_DATA_1_ID 0x215
+#define S_BATTERY_IR_DATA_2_ID 0x216
+#define S_BATTERY_IR_DATA_3_ID 0x217
+#define S_BATTERY_IR_DATA_4_ID 0x218
+#define S_BATTERY_CHARGING_DATA_1_ID 0x219
+#define S_BATTERY_DATA_3_ID 0x220
+#define S_BATTERY_DATA_4_ID 0x221
+#define S_BATTERY_DATA_5_ID 0x222
+#define S_BATTERY_FAULT_DATA_ID 0x223
+#define S_BATTERY_OCV_DATA1_ID 0x224
+#define S_BATTERY_OCV_DATA2_ID 0x225
+#define S_BATTERY_OCV_DATA3_ID 0x226
+#define S_BATTERY_OCV_DATA4_ID 0x227
 #define MCU_FAULT_DATA_ID 0x300
 #define MCU_DATA_ID 0x301
 #define MCU_ODO_DATA_ID 0x302
@@ -100,6 +106,9 @@ typedef struct {
 typedef struct {
     uint16_t PDU_Temperature_AFE : 16;
     uint16_t PDU_Temperature_BMS : 16;
+} M_Battery_PDU_Temp_Data_t;
+
+typedef struct {
     uint16_t Balancing_Temperature_AFE : 16;
     uint16_t Battery_Pack_Effective_Temp : 16;
 } M_Battery_Temp_Data_1_t;
@@ -107,9 +116,12 @@ typedef struct {
 typedef struct {
     uint16_t Battery_Pack_Temp_Sensor_1 : 16;
     uint16_t Battery_Pack_Temp_Sensor_2 : 16;
+} M_Battery_Temp_Data_2_t;
+
+typedef struct {
     uint16_t Battery_Pack_Temp_Sensor_3 : 16;
     uint16_t Battery_Pack_Temp_Sensor_4 : 16;
-} M_Battery_Temp_Data_2_t;
+} M_Battery_Temp_Data_3_t;
 
 typedef struct {
     uint8_t BMS_IN_Supply_9V : 1;
@@ -152,6 +164,9 @@ typedef struct {
 typedef struct {
     uint16_t Discharge_Current_Limit : 16;
     uint16_t Regenerative_Current_Limit : 16;
+} M_Current_Limit_Data_t;
+
+typedef struct {
     uint16_t Battery_Pack_Current : 16;
     uint16_t Battery_Pack_Voltage : 16;
 } M_Battery_Pack_V_I_t;
@@ -206,11 +221,11 @@ typedef struct {
 
 typedef struct {
     uint64_t RTC_Date : 48;
-} M_RTC_Date_t;
+} M_Battery_Data_3_t;
 
 typedef struct {
     uint64_t RTC_Time : 48;
-} M_RTC_Time_t;
+} M_Battery_Data_4_t;
 
 typedef struct {
     uint8_t BMS_Modes : 4;
@@ -317,16 +332,22 @@ typedef struct {
 typedef struct {
     uint16_t PDU_Temperature_AFE : 16;
     uint16_t PDU_Temperature_BMS : 16;
+} S_Battery_PDU_Temp_Data_t;
+
+typedef struct {
     uint16_t Balancing_Temperature_AFE : 16;
     uint16_t Battery_Pack_Effective_Temp : 16;
-} S_Battery_PDU_Temp_Data_t;
+} S_Battery_Temp_Data_1_t;
 
 typedef struct {
     uint16_t Battery_Pack_Temp_Sensor_1 : 16;
     uint16_t Battery_Pack_Temp_Sensor_2 : 16;
+} S_Battery_Temp_Data_2_t;
+
+typedef struct {
     uint16_t Battery_Pack_Temp_Sensor_3 : 16;
     uint16_t Battery_Pack_Temp_Sensor_4 : 16;
-} S_Battery_Temp_Data_2_t;
+} S_Battery_Temp_Data_3_t;
 
 typedef struct {
     uint8_t BMS_IN_Supply_9V : 1;
@@ -368,7 +389,10 @@ typedef struct {
 
 typedef struct {
     uint16_t Discharge_Current_Limit : 16;
-    uint16_t Regenerative_Current_Limit : 16;
+    uint16_t Regenerative_Current_Limit : 14;
+} S_Current_Limit_Data_t;
+
+typedef struct {
     uint16_t Battery_Pack_Current : 16;
     uint16_t Battery_Pack_Voltage : 16;
 } S_Battery_Pack_V_I_t;
@@ -487,6 +511,10 @@ typedef struct {
 } S_Battery_OCV_Data3_t;
 
 typedef struct {
+    uint16_t Cell_13_OCV : 16;
+    uint16_t Cell_14_OCV : 16;
+    uint16_t Cell_15_OCV : 16;
+    uint16_t Cell_16_OCV : 16;
 } S_Battery_OCV_Data4_t;
 
 typedef struct {
@@ -516,8 +544,8 @@ typedef struct {
 } MCU_Data_t;
 
 typedef struct {
-    uint32_t Vehicle_Odo_Data : 32;
-    uint32_t Trip_Odo_Data : 32;
+    uint16_t Vehicle_Odo_Data : 16;
+    uint16_t Trip_Odo_Data : 16;
 } MCU_Odo_Data_t;
 
 typedef struct {
@@ -527,7 +555,7 @@ typedef struct {
 
 typedef struct {
     uint16_t Charger_Out_Voltage : 16;
-    uint16_t Charger_Out_Current : 16;
+    uint32_t Charger_Out_Current : 32;
     uint8_t Charger_Hardware : 1;
     uint8_t Charger_OverTemp : 1;
     uint8_t Charger_Input : 1;
@@ -542,9 +570,12 @@ void encode_M_Battery_Voltage_Data2(const M_Battery_Voltage_Data2_t* msg, uint8_
 void encode_M_Battery_Voltage_Data3(const M_Battery_Voltage_Data3_t* msg, uint8_t* data);
 void encode_M_Battery_Voltage_Data4(const M_Battery_Voltage_Data4_t* msg, uint8_t* data);
 void encode_M_Max_Min_Cell_Voltage(const M_Max_Min_Cell_Voltage_t* msg, uint8_t* data);
+void encode_M_Battery_PDU_Temp_Data(const M_Battery_PDU_Temp_Data_t* msg, uint8_t* data);
 void encode_M_Battery_Temp_Data_1(const M_Battery_Temp_Data_1_t* msg, uint8_t* data);
 void encode_M_Battery_Temp_Data_2(const M_Battery_Temp_Data_2_t* msg, uint8_t* data);
+void encode_M_Battery_Temp_Data_3(const M_Battery_Temp_Data_3_t* msg, uint8_t* data);
 void encode_M_BMS_Status_Data_1(const M_BMS_Status_Data_1_t* msg, uint8_t* data);
+void encode_M_Current_Limit_Data(const M_Current_Limit_Data_t* msg, uint8_t* data);
 void encode_M_Battery_Pack_V_I(const M_Battery_Pack_V_I_t* msg, uint8_t* data);
 void encode_M_Battery_Data_1(const M_Battery_Data_1_t* msg, uint8_t* data);
 void encode_M_Battery_Data_2(const M_Battery_Data_2_t* msg, uint8_t* data);
@@ -553,8 +584,8 @@ void encode_M_Battery_IR_Data_2(const M_Battery_IR_Data_2_t* msg, uint8_t* data)
 void encode_M_Battery_IR_Data_3(const M_Battery_IR_Data_3_t* msg, uint8_t* data);
 void encode_M_Battery_IR_Data_4(const M_Battery_IR_Data_4_t* msg, uint8_t* data);
 void encode_M_Battery_Charging_Data_1(const M_Battery_Charging_Data_1_t* msg, uint8_t* data);
-void encode_M_RTC_Date(const M_RTC_Date_t* msg, uint8_t* data);
-void encode_M_RTC_Time(const M_RTC_Time_t* msg, uint8_t* data);
+void encode_M_Battery_Data_3(const M_Battery_Data_3_t* msg, uint8_t* data);
+void encode_M_Battery_Data_4(const M_Battery_Data_4_t* msg, uint8_t* data);
 void encode_M_Battery_Data_5(const M_Battery_Data_5_t* msg, uint8_t* data);
 void encode_M_Battery_Fault_Data(const M_Battery_Fault_Data_t* msg, uint8_t* data);
 void encode_M_Battery_OCV_Data1(const M_Battery_OCV_Data1_t* msg, uint8_t* data);
@@ -568,8 +599,11 @@ void encode_S_Battery_Voltage_Data3(const S_Battery_Voltage_Data3_t* msg, uint8_
 void encode_S_Battery_Voltage_Data4(const S_Battery_Voltage_Data4_t* msg, uint8_t* data);
 void encode_S_Max_Min_Cell_Voltage(const S_Max_Min_Cell_Voltage_t* msg, uint8_t* data);
 void encode_S_Battery_PDU_Temp_Data(const S_Battery_PDU_Temp_Data_t* msg, uint8_t* data);
+void encode_S_Battery_Temp_Data_1(const S_Battery_Temp_Data_1_t* msg, uint8_t* data);
 void encode_S_Battery_Temp_Data_2(const S_Battery_Temp_Data_2_t* msg, uint8_t* data);
+void encode_S_Battery_Temp_Data_3(const S_Battery_Temp_Data_3_t* msg, uint8_t* data);
 void encode_S_BMS_Status_Data_1(const S_BMS_Status_Data_1_t* msg, uint8_t* data);
+void encode_S_Current_Limit_Data(const S_Current_Limit_Data_t* msg, uint8_t* data);
 void encode_S_Battery_Pack_V_I(const S_Battery_Pack_V_I_t* msg, uint8_t* data);
 void encode_S_Battery_Data_1(const S_Battery_Data_1_t* msg, uint8_t* data);
 void encode_S_Battery_Data_2(const S_Battery_Data_2_t* msg, uint8_t* data);
@@ -598,9 +632,12 @@ void decode_M_Battery_Voltage_Data2(const uint8_t* data, M_Battery_Voltage_Data2
 void decode_M_Battery_Voltage_Data3(const uint8_t* data, M_Battery_Voltage_Data3_t* msg);
 void decode_M_Battery_Voltage_Data4(const uint8_t* data, M_Battery_Voltage_Data4_t* msg);
 void decode_M_Max_Min_Cell_Voltage(const uint8_t* data, M_Max_Min_Cell_Voltage_t* msg);
+void decode_M_Battery_PDU_Temp_Data(const uint8_t* data, M_Battery_PDU_Temp_Data_t* msg);
 void decode_M_Battery_Temp_Data_1(const uint8_t* data, M_Battery_Temp_Data_1_t* msg);
 void decode_M_Battery_Temp_Data_2(const uint8_t* data, M_Battery_Temp_Data_2_t* msg);
+void decode_M_Battery_Temp_Data_3(const uint8_t* data, M_Battery_Temp_Data_3_t* msg);
 void decode_M_BMS_Status_Data_1(const uint8_t* data, M_BMS_Status_Data_1_t* msg);
+void decode_M_Current_Limit_Data(const uint8_t* data, M_Current_Limit_Data_t* msg);
 void decode_M_Battery_Pack_V_I(const uint8_t* data, M_Battery_Pack_V_I_t* msg);
 void decode_M_Battery_Data_1(const uint8_t* data, M_Battery_Data_1_t* msg);
 void decode_M_Battery_Data_2(const uint8_t* data, M_Battery_Data_2_t* msg);
@@ -609,8 +646,8 @@ void decode_M_Battery_IR_Data_2(const uint8_t* data, M_Battery_IR_Data_2_t* msg)
 void decode_M_Battery_IR_Data_3(const uint8_t* data, M_Battery_IR_Data_3_t* msg);
 void decode_M_Battery_IR_Data_4(const uint8_t* data, M_Battery_IR_Data_4_t* msg);
 void decode_M_Battery_Charging_Data_1(const uint8_t* data, M_Battery_Charging_Data_1_t* msg);
-void decode_M_RTC_Date(const uint8_t* data, M_RTC_Date_t* msg);
-void decode_M_RTC_Time(const uint8_t* data, M_RTC_Time_t* msg);
+void decode_M_Battery_Data_3(const uint8_t* data, M_Battery_Data_3_t* msg);
+void decode_M_Battery_Data_4(const uint8_t* data, M_Battery_Data_4_t* msg);
 void decode_M_Battery_Data_5(const uint8_t* data, M_Battery_Data_5_t* msg);
 void decode_M_Battery_Fault_Data(const uint8_t* data, M_Battery_Fault_Data_t* msg);
 void decode_M_Battery_OCV_Data1(const uint8_t* data, M_Battery_OCV_Data1_t* msg);
@@ -624,8 +661,11 @@ void decode_S_Battery_Voltage_Data3(const uint8_t* data, S_Battery_Voltage_Data3
 void decode_S_Battery_Voltage_Data4(const uint8_t* data, S_Battery_Voltage_Data4_t* msg);
 void decode_S_Max_Min_Cell_Voltage(const uint8_t* data, S_Max_Min_Cell_Voltage_t* msg);
 void decode_S_Battery_PDU_Temp_Data(const uint8_t* data, S_Battery_PDU_Temp_Data_t* msg);
+void decode_S_Battery_Temp_Data_1(const uint8_t* data, S_Battery_Temp_Data_1_t* msg);
 void decode_S_Battery_Temp_Data_2(const uint8_t* data, S_Battery_Temp_Data_2_t* msg);
+void decode_S_Battery_Temp_Data_3(const uint8_t* data, S_Battery_Temp_Data_3_t* msg);
 void decode_S_BMS_Status_Data_1(const uint8_t* data, S_BMS_Status_Data_1_t* msg);
+void decode_S_Current_Limit_Data(const uint8_t* data, S_Current_Limit_Data_t* msg);
 void decode_S_Battery_Pack_V_I(const uint8_t* data, S_Battery_Pack_V_I_t* msg);
 void decode_S_Battery_Data_1(const uint8_t* data, S_Battery_Data_1_t* msg);
 void decode_S_Battery_Data_2(const uint8_t* data, S_Battery_Data_2_t* msg);
