@@ -90,6 +90,7 @@ void encode_M_Max_Min_Cell_Voltage(const M_Max_Min_Cell_Voltage_t* msg, uint8_t*
     data[1] |= (msg->Max_Cell_Voltage >> 8) & 0xFF;
     data[2] |= (msg->Min_Cell_Voltage >> 0) & 0xFF;
     data[3] |= (msg->Min_Cell_Voltage >> 8) & 0xFF;
+    data[4] |= (msg->SinglePack_Connected & 0x1) << 0;
 }
 
 /* M_Battery_PDU_Temp_Data */
@@ -567,6 +568,8 @@ void encode_S_Current_Limit_Data(const S_Current_Limit_Data_t* msg, uint8_t* dat
     memset(data, 0, 8);
     data[0] |= (msg->Discharge_Current_Limit >> 0) & 0xFF;
     data[1] |= (msg->Discharge_Current_Limit >> 8) & 0xFF;
+    data[2] |= (msg->Regenerative_Current_Limit >> 0) & 0xFF;
+    data[3] |= (msg->Regenerative_Current_Limit >> 8) & 0xFF;
 }
 
 /* S_Battery_Pack_V_I */
@@ -811,8 +814,12 @@ void encode_MCU_Odo_Data(const MCU_Odo_Data_t* msg, uint8_t* data) {
     memset(data, 0, 8);
     data[0] |= (msg->Vehicle_Odo_Data >> 0) & 0xFF;
     data[1] |= (msg->Vehicle_Odo_Data >> 8) & 0xFF;
-    data[2] |= (msg->Trip_Odo_Data >> 0) & 0xFF;
-    data[3] |= (msg->Trip_Odo_Data >> 8) & 0xFF;
+    data[2] |= (msg->Vehicle_Odo_Data >> 16) & 0xFF;
+    data[3] |= (msg->Vehicle_Odo_Data >> 24) & 0xFF;
+    data[4] |= (msg->Trip_Odo_Data >> 0) & 0xFF;
+    data[5] |= (msg->Trip_Odo_Data >> 8) & 0xFF;
+    data[6] |= (msg->Trip_Odo_Data >> 16) & 0xFF;
+    data[7] |= (msg->Trip_Odo_Data >> 24) & 0xFF;
 }
 
 /* MCU_Temp_Data */

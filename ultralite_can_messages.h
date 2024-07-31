@@ -101,6 +101,7 @@ typedef struct {
 typedef struct {
     uint16_t Max_Cell_Voltage : 16;
     uint16_t Min_Cell_Voltage : 16;
+    uint8_t SinglePack_Connected : 1;
 } M_Max_Min_Cell_Voltage_t;
 
 typedef struct {
@@ -389,7 +390,7 @@ typedef struct {
 
 typedef struct {
     uint16_t Discharge_Current_Limit : 16;
-    uint16_t Regenerative_Current_Limit : 14;
+    uint16_t Regenerative_Current_Limit : 16;
 } S_Current_Limit_Data_t;
 
 typedef struct {
@@ -544,8 +545,8 @@ typedef struct {
 } MCU_Data_t;
 
 typedef struct {
-    uint16_t Vehicle_Odo_Data : 16;
-    uint16_t Trip_Odo_Data : 16;
+    uint32_t Vehicle_Odo_Data : 32;
+    uint32_t Trip_Odo_Data : 32;
 } MCU_Odo_Data_t;
 
 typedef struct {
