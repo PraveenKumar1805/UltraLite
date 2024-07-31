@@ -128,7 +128,7 @@ BO_ 273 M_Current_Limit_Data: 8 BMS1
 
 BO_ 274 M_Battery_Pack_V_I: 8 BMS1
  SG_ Battery_Pack_Voltage : 16|16@1+ (0.1,0.0) [0.0|100.0] "V"  MCU,TCU
- SG_ Battery_Pack_Current : 0|16@1+ (0.1,0.0) [0.0|200.0] "A"  MCU,TCU
+ SG_ Battery_Pack_Current : 0|16@1+ (0.1,-200.0) [0.0|200.0] "A"  MCU,TCU
 
 BO_ 275 M_Battery_Data_1: 8 BMS1
  SG_ Time_To_Charge : 48|16@1+ (1,0) [0|0] ""  Cluster,MCU,OBC,TCU
@@ -178,6 +178,8 @@ BO_ 289 M_Battery_Data_4: 8 BMS1
  SG_ RTC_Time : 0|48@1+ (1,0) [0|0] ""  TCU
 
 BO_ 290 M_Battery_Data_5: 8 BMS1
+ SG_ Charge_Cycle_Count : 32|16@1+ (1,0) [0.0|1000.0] "Count"  BMS2,MCU,TCU
+ SG_ Dishcarge_Cycle_Count : 16|16@1+ (1,0) [0.0|1000.0] "Count"  BMS2,MCU,TCU
  SG_ DisChg_Cont_Cmd : 10|1@1+ (1,0) [0.0|1.0] ""  BMS2,MCU,TCU
  SG_ Chg_Cont_Cmd : 9|1@1+ (1,0) [0.0|1.0] ""  BMS2,MCU,TCU
  SG_ Prechg_Cont_Cmd : 8|1@1+ (1,0) [0.0|1.0] ""  BMS2,MCU,TCU
@@ -616,6 +618,8 @@ CM_ SG_ 288 RTC_Date "Day, Month, Year";
 CM_ BO_ 289 "";
 CM_ SG_ 289 RTC_Time "RTC time (Hour, min, sec)";
 CM_ BO_ 290 "";
+CM_ SG_ 290 Charge_Cycle_Count "";
+CM_ SG_ 290 Dishcarge_Cycle_Count "";
 CM_ SG_ 290 DisChg_Cont_Cmd "";
 CM_ SG_ 290 Chg_Cont_Cmd "";
 CM_ SG_ 290 Prechg_Cont_Cmd "";
@@ -1052,6 +1056,8 @@ VAL_ 281 Charge_Demand_Voltage  ;
 VAL_ 281 BMS_Charge_Mode 0 "Disabled" 1 "CC" 2 "CC_END" 3 "CV" 4 "Charge_Complete" ;
 VAL_ 288 RTC_Date  ;
 VAL_ 289 RTC_Time  ;
+VAL_ 290 Charge_Cycle_Count  ;
+VAL_ 290 Dishcarge_Cycle_Count  ;
 VAL_ 290 DisChg_Cont_Cmd 0 "Disconnected" 1 "Connected" ;
 VAL_ 290 Chg_Cont_Cmd 0 "Disconnected" 1 "Connected" ;
 VAL_ 290 Prechg_Cont_Cmd 0 "Disconnected" 1 "Connected" ;

@@ -234,6 +234,8 @@ typedef struct {
     uint8_t Prechg_Cont_Cmd : 1;
     uint8_t Chg_Cont_Cmd : 1;
     uint8_t DisChg_Cont_Cmd : 1;
+    uint16_t Dishcarge_Cycle_Count : 16;
+    uint16_t Charge_Cycle_Count : 16;
 } M_Battery_Data_5_t;
 
 typedef struct {

@@ -865,6 +865,10 @@ void encode_M_Battery_Data_5(const M_Battery_Data_5_t* msg, uint8_t* data) {
     data[1] |= (msg->Prechg_Cont_Cmd & 0x1) << 0;
     data[1] |= (msg->Chg_Cont_Cmd & 0x1) << 1;
     data[1] |= (msg->DisChg_Cont_Cmd & 0x1) << 2;
+    data[2] |= (msg->Dishcarge_Cycle_Count >> 0) & 0xFF;
+    data[3] |= (msg->Dishcarge_Cycle_Count >> 8) & 0xFF;
+    data[4] |= (msg->Charge_Cycle_Count >> 0) & 0xFF;
+    data[5] |= (msg->Charge_Cycle_Count >> 8) & 0xFF;
 }
 
 /* S_Battery_Data_5 */
