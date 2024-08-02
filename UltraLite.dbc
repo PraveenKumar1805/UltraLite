@@ -187,25 +187,27 @@ BO_ 290 M_Battery_Data_5: 8 BMS1
  SG_ BMS_Modes : 0|4@1+ (1,0) [0.0|7.0] ""  BMS2,MCU,TCU
 
 BO_ 291 M_Battery_Fault_Data: 8 BMS1
- SG_ Ther_RunAway_Alert : 24|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Therm_RunAway_CutOFF : 23|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ PDU_TempRise_Perm : 22|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Batt_TempRise_Perm : 21|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Dis_CutOff : 20|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Charge_CutOff : 19|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Dis_OvrTemp_Err : 18|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Dis_OvrTemp_Warn : 17|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Chg_OvrTemp_Warn : 16|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Chg_Und_Vol_Warn : 15|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Chg_Ovr_Vol_Perm : 14|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Chg_Ovr_Vol_Err : 13|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Chg_Ovr_Vol_Warn : 12|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ PDU_Temp_Err : 11|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Over_Temp_Perm : 10|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Short_Circuit_Perm : 9|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Short_Circuit_Err : 8|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell_Und_Voltage : 7|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Cell_Ovr_Voltage : 6|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Ther_RunAway_Alert : 26|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Therm_RunAway_CutOFF : 25|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ PDU_TempRise_Perm : 24|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Batt_TempRise_Perm : 23|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Dis_CutOff : 22|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Charge_CutOff : 21|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Dis_OvrTemp_Err : 20|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Dis_OvrTemp_Warn : 19|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_OvrTemp_Warn : 18|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Und_Vol_Warn : 17|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Ovr_Vol_Perm : 16|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Ovr_Vol_Err : 15|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Ovr_Vol_Warn : 14|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ PDU_Temp_Err : 13|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Over_Temp_Perm : 12|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Short_Circuit_Perm : 11|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Short_Circuit_Err : 10|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell_Und_Voltage_Perm : 9|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell_Ovr_Voltage_Perm : 8|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell_Und_Voltage_Err : 7|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell_Ovr_Voltage_Err : 6|1@1+ (1,0) [0.0|1.0] ""  TCU
  SG_ Dis_Connection_Err : 5|1@1+ (1,0) [0.0|1.0] ""  TCU
  SG_ Main_Connection_Err : 4|1@1+ (1,0) [0.0|1.0] ""  TCU
  SG_ Precharge_Fail_Perm : 3|1@1+ (1,0) [0.0|1.0] ""  TCU
@@ -385,23 +387,25 @@ BO_ 546 S_Battery_Data_5: 8 BMS2
  SG_ BMS_Modes : 0|4@1+ (1,0) [0.0|7.0] ""  BMS1,MCU,TCU
 
 BO_ 547 S_Battery_Fault_Data: 8 BMS2
- SG_ Ther_RunAway_Alert : 24|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Therm_RunAway_CutOFF : 23|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ PDU_TempRise_Perm : 22|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Batt_TempRise_Perm : 21|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Dis_CutOff : 20|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Charge_CutOff : 19|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Dis_OvrTemp_Err : 18|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Dis_OvrTemp_Warn : 17|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Chg_OvrTemp_Warn : 16|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Chg_Und_Vol_Warn : 15|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Chg_Ovr_Vol_Perm : 14|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Chg_Ovr_Vol_Err : 13|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Chg_Ovr_Vol_Warn : 12|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ PDU_Temp_Err : 11|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Over_Temp_Perm : 10|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Short_Circuit_Perm : 9|1@1+ (1,0) [0.0|1.0] ""  TCU
- SG_ Short_Circuit_Err : 8|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Ther_RunAway_Alert : 26|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Therm_RunAway_CutOFF : 25|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ PDU_TempRise_Perm : 24|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Batt_TempRise_Perm : 23|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Dis_CutOff : 22|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Charge_CutOff : 21|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Dis_OvrTemp_Err : 20|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Dis_OvrTemp_Warn : 19|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_OvrTemp_Warn : 18|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Und_Vol_Warn : 17|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Ovr_Vol_Perm : 16|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Ovr_Vol_Err : 15|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Chg_Ovr_Vol_Warn : 14|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ PDU_Temp_Err : 13|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Over_Temp_Perm : 12|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Short_Circuit_Perm : 11|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Short_Circuit_Err : 10|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell_Und_Voltage_Perm : 9|1@1+ (1,0) [0.0|1.0] ""  TCU
+ SG_ Cell_Ovr_Voltage_Perm : 8|1@1+ (1,0) [0.0|1.0] ""  TCU
  SG_ Cell_Und_Voltage : 7|1@1+ (1,0) [0.0|1.0] ""  TCU
  SG_ Cell_Ovr_Voltage : 6|1@1+ (1,0) [0.0|1.0] ""  TCU
  SG_ Dis_Connection_Err : 5|1@1+ (1,0) [0.0|1.0] ""  TCU
@@ -476,6 +480,30 @@ BO_ 1024 Charger_Data: 8 OBC
  SG_ Charger_Hardware : 48|1@1+ (1,0) [0.0|1.0] ""  BMS1,BMS2,TCU
  SG_ Charger_Out_Current : 16|32@1+ (0.1,0.0) [0.0|20.0] "A"  BMS1,BMS2,TCU
  SG_ Charger_Out_Voltage : 0|16@1+ (0.1,0.0) [0.0|60.0] "V"  BMS1,BMS2,TCU
+
+BO_ 1408 Send_VCU_Cmd: 8 Vector__XXX
+ SG_ Sim_Charger_Volt_Req : 48|10@1+ (0.1,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Sim_BMS_Char_Curr_Req : 40|8@1+ (0.1,0.0) [0.0|1.0] "" Vector__XXX
+ SG_ Discharge_Mode : 38|1@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ Direct_Enable : 37|1@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ Ovr_Temp_Enable : 36|1@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ Und_Temp_Enable : 35|1@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ Temp_Fault_Enable : 34|1@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ Sim_Charger_Current_Req_Flg : 33|1@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ Voltage_Fault_Enable : 32|1@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ Current_Sim_Value : 16|16@1+ (0.01,0.0) [0|0] "A" Vector__XXX
+ SG_ Cell_Fault_OV : 15|1@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ Slm_Charger_Volt_Enable_Flag : 14|1@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ Cell_Fault_UV : 13|1@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ Simulation_Enable : 12|1@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ Current_Dir : 11|1@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ Vehicle_Mode_L3 : 9|2@1+ (1,0) [0.0|3.0] "" Vector__XXX
+ SG_ Ign : 8|1@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ Vehicle_Mode_L2 : 6|2@1+ (1,0) [0.0|3.0] "" Vector__XXX
+ SG_ BMS_WakUp_Req : 4|2@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ Diagnostic_Flg : 3|1@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ Charge_Connected : 2|1@1+ (1,0) [0.0|1.0] "" Vector__XXX
+ SG_ VCU_Wakup_Req : 0|2@1+ (1,0) [0.0|2.0] "" Vector__XXX
 
 
 
@@ -643,8 +671,10 @@ CM_ SG_ 291 PDU_Temp_Err "1 for Indication of PDU Temperature Error";
 CM_ SG_ 291 Over_Temp_Perm "1 for Indication of Permanent Over Temperature";
 CM_ SG_ 291 Short_Circuit_Perm "1 for Indication of Permanent Short Circuit";
 CM_ SG_ 291 Short_Circuit_Err "1 for Indication of Short Circuit Error";
-CM_ SG_ 291 Cell_Und_Voltage "1 for Indication of Cell Under Voltage";
-CM_ SG_ 291 Cell_Ovr_Voltage "1 for Indication of Cell Over Voltage";
+CM_ SG_ 291 Cell_Und_Voltage_Perm "";
+CM_ SG_ 291 Cell_Ovr_Voltage_Perm "";
+CM_ SG_ 291 Cell_Und_Voltage_Err "1 for Indication of Cell Under Voltage";
+CM_ SG_ 291 Cell_Ovr_Voltage_Err "1 for Indication of Cell Over Voltage";
 CM_ SG_ 291 Dis_Connection_Err "1 for Indication of DisConnection Error";
 CM_ SG_ 291 Main_Connection_Err "1 for Indication of Main Connection Error";
 CM_ SG_ 291 Precharge_Fail_Perm "1 for Indication of Precharge Fail Permanent";
@@ -831,6 +861,8 @@ CM_ SG_ 547 PDU_Temp_Err "1 for Indication of PDU Temperature Error";
 CM_ SG_ 547 Over_Temp_Perm "1 for Indication of Permanent Over Temperature";
 CM_ SG_ 547 Short_Circuit_Perm "1 for Indication of Permanent Short Circuit";
 CM_ SG_ 547 Short_Circuit_Err "1 for Indication of Short Circuit Error";
+CM_ SG_ 547 Cell_Und_Voltage_Perm "";
+CM_ SG_ 547 Cell_Ovr_Voltage_Perm "";
 CM_ SG_ 547 Cell_Und_Voltage "1 for Indication of Cell Under Voltage";
 CM_ SG_ 547 Cell_Ovr_Voltage "1 for Indication of Cell Over Voltage";
 CM_ SG_ 547 Dis_Connection_Err "1 for Indication of DisConnection Error";
@@ -896,6 +928,29 @@ CM_ SG_ 1024 Charger_OverTemp "";
 CM_ SG_ 1024 Charger_Hardware "";
 CM_ SG_ 1024 Charger_Out_Current "";
 CM_ SG_ 1024 Charger_Out_Voltage "";
+CM_ BO_ 1408 "";
+CM_ SG_ 1408 Sim_Charger_Volt_Req "";
+CM_ SG_ 1408 Sim_BMS_Char_Curr_Req "";
+CM_ SG_ 1408 Discharge_Mode "";
+CM_ SG_ 1408 Direct_Enable "";
+CM_ SG_ 1408 Ovr_Temp_Enable "";
+CM_ SG_ 1408 Und_Temp_Enable "";
+CM_ SG_ 1408 Temp_Fault_Enable "";
+CM_ SG_ 1408 Sim_Charger_Current_Req_Flg "";
+CM_ SG_ 1408 Voltage_Fault_Enable "";
+CM_ SG_ 1408 Current_Sim_Value "";
+CM_ SG_ 1408 Cell_Fault_OV "";
+CM_ SG_ 1408 Slm_Charger_Volt_Enable_Flag "";
+CM_ SG_ 1408 Cell_Fault_UV "";
+CM_ SG_ 1408 Simulation_Enable "";
+CM_ SG_ 1408 Current_Dir "";
+CM_ SG_ 1408 Vehicle_Mode_L3 "";
+CM_ SG_ 1408 Ign "";
+CM_ SG_ 1408 Vehicle_Mode_L2 "";
+CM_ SG_ 1408 BMS_WakUp_Req "";
+CM_ SG_ 1408 Diagnostic_Flg "";
+CM_ SG_ 1408 Charge_Connected "";
+CM_ SG_ 1408 VCU_Wakup_Req "";
 BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
 BA_DEF_DEF_  "GenMsgCycleTime" 0;
 BA_ "GenMsgCycleTime" BO_ 256 100;
@@ -959,6 +1014,7 @@ BA_ "GenMsgCycleTime" BO_ 769 100;
 BA_ "GenMsgCycleTime" BO_ 770 100;
 BA_ "GenMsgCycleTime" BO_ 771 100;
 BA_ "GenMsgCycleTime" BO_ 1024 100;
+BA_ "GenMsgCycleTime" BO_ 1408 100;
 VAL_ 256 Unique_ID  ;
 VAL_ 256 SoC  ;
 VAL_ 257 Cell_Voltage_4  ;
@@ -1080,8 +1136,10 @@ VAL_ 291 PDU_Temp_Err 0 "No_PDU_Temp_Err" 1 "PDU_Temp_Err" ;
 VAL_ 291 Over_Temp_Perm 0 "No_Over_Temp_Perm" 1 "Over_Temp_Perm" ;
 VAL_ 291 Short_Circuit_Perm 0 "No_Short_Circuit_Perm" 1 "Short_Circuit_Perm" ;
 VAL_ 291 Short_Circuit_Err 0 "No_Short_Circuit" 1 "Short_Circuit" ;
-VAL_ 291 Cell_Und_Voltage 0 "No_Cell_Und_Volt" 1 "Cell_Und_Volt" ;
-VAL_ 291 Cell_Ovr_Voltage 0 "No_Cell_Ovr_Volt" 1 "Cell_Ovr_Volt" ;
+VAL_ 291 Cell_Und_Voltage_Perm 0 "No_Cell_Und_Voltage_Perm" 1 "Cell_Und_Voltage_Perm" ;
+VAL_ 291 Cell_Ovr_Voltage_Perm 0 "No_Cell_Ovr_Voltage_Perm" 1 "Cell_Ovr_Voltage_Perm" ;
+VAL_ 291 Cell_Und_Voltage_Err 0 "No_Cell_Und_Volt" 1 "Cell_Und_Volt" ;
+VAL_ 291 Cell_Ovr_Voltage_Err 0 "No_Cell_Ovr_Volt" 1 "Cell_Ovr_Volt" ;
 VAL_ 291 Dis_Connection_Err 0 "No_Dis_Conn_Err" 1 "Dis_Conn_Err" ;
 VAL_ 291 Main_Connection_Err 0 "No_Main_Conn_Err" 1 "Main_Conn_Err" ;
 VAL_ 291 Precharge_Fail_Perm 0 "No_PreChg_Fail_Perm" 1 "Prechg_Fail_Perm" ;
@@ -1222,6 +1280,8 @@ VAL_ 547 PDU_Temp_Err 0 "No_PDU_Temp_Err" 1 "PDU_Temp_Err" ;
 VAL_ 547 Over_Temp_Perm 0 "No_Over_Temp_Perm" 1 "Over_Temp_Perm" ;
 VAL_ 547 Short_Circuit_Perm 0 "No_Short_Circuit_Perm" 1 "Short_Circuit_Perm" ;
 VAL_ 547 Short_Circuit_Err 0 "No_Short_Circuit" 1 "Short_Circuit" ;
+VAL_ 547 Cell_Und_Voltage_Perm 0 "No_Cell_Und_Voltage_Perm" 1 "Cell_Und_Voltage_Perm" ;
+VAL_ 547 Cell_Ovr_Voltage_Perm 0 "No_Cell_Ovr_Voltage_Perm" 1 "Cell_Ovr_Voltage_Perm" ;
 VAL_ 547 Cell_Und_Voltage 0 "No_Cell_Und_Volt" 1 "Cell_Und_Volt" ;
 VAL_ 547 Cell_Ovr_Voltage 0 "No_Cell_Ovr_Volt" 1 "Cell_Ovr_Volt" ;
 VAL_ 547 Dis_Connection_Err 0 "No_Dis_Conn_Err" 1 "Dis_Conn_Err" ;
@@ -1278,6 +1338,28 @@ VAL_ 1024 Charger_OverTemp 0 "Normal" 1 "Abnormal_Temperature" ;
 VAL_ 1024 Charger_Hardware 0 "Normal" 1 "Hardware_Failure" ;
 VAL_ 1024 Charger_Out_Current  ;
 VAL_ 1024 Charger_Out_Voltage  ;
+VAL_ 1408 Sim_Charger_Volt_Req  ;
+VAL_ 1408 Sim_BMS_Char_Curr_Req  ;
+VAL_ 1408 Discharge_Mode  ;
+VAL_ 1408 Direct_Enable  ;
+VAL_ 1408 Ovr_Temp_Enable  ;
+VAL_ 1408 Und_Temp_Enable  ;
+VAL_ 1408 Temp_Fault_Enable  ;
+VAL_ 1408 Sim_Charger_Current_Req_Flg  ;
+VAL_ 1408 Voltage_Fault_Enable  ;
+VAL_ 1408 Current_Sim_Value  ;
+VAL_ 1408 Cell_Fault_OV  ;
+VAL_ 1408 Slm_Charger_Volt_Enable_Flag  ;
+VAL_ 1408 Cell_Fault_UV  ;
+VAL_ 1408 Simulation_Enable  ;
+VAL_ 1408 Current_Dir  ;
+VAL_ 1408 Vehicle_Mode_L3 0 "NA" 1 "Normal" 2 "Sport" 3 "Hyper" ;
+VAL_ 1408 Ign  ;
+VAL_ 1408 Vehicle_Mode_L2 0 "VCU_SNA" 1 "VCU_Discharge" 2 "VCU_Charge" ;
+VAL_ 1408 BMS_WakUp_Req 0 "No_WakeUp" 1 "CAN_WakeUp" 2 "RTC_WakeUp" ;
+VAL_ 1408 Diagnostic_Flg  ;
+VAL_ 1408 Charge_Connected  ;
+VAL_ 1408 VCU_Wakup_Req 0 "SNA" 1 "Req_WakUp" 2 "Req_Sleep" ;
 
 
 

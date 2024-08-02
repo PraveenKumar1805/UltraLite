@@ -852,6 +852,31 @@ void encode_Charger_Data(const Charger_Data_t* msg, uint8_t* data) {
     data[6] |= (msg->Charger_CAN & 0x1) << 5;
 }
 
+/* Send_VCU_Cmd */
+#define SEND_VCU_CMD_ID 0x580
+
+void encode_Send_VCU_Cmd(const Send_VCU_Cmd_t* msg, uint8_t* data) {
+    memset(data, 0, 8);
+    data[0] |= (msg->Charge_Connected & 0x1) << 2;
+    data[0] |= (msg->Diagnostic_Flg & 0x1) << 3;
+    data[1] |= (msg->Ign & 0x1) << 0;
+    data[1] |= (msg->Current_Dir & 0x1) << 3;
+    data[1] |= (msg->Simulation_Enable & 0x1) << 4;
+    data[1] |= (msg->Cell_Fault_UV & 0x1) << 5;
+    data[1] |= (msg->Slm_Charger_Volt_Enable_Flag & 0x1) << 6;
+    data[1] |= (msg->Cell_Fault_OV & 0x1) << 7;
+    data[2] |= (msg->Current_Sim_Value >> 0) & 0xFF;
+    data[3] |= (msg->Current_Sim_Value >> 8) & 0xFF;
+    data[4] |= (msg->Voltage_Fault_Enable & 0x1) << 0;
+    data[4] |= (msg->Sim_Charger_Current_Req_Flg & 0x1) << 1;
+    data[4] |= (msg->Temp_Fault_Enable & 0x1) << 2;
+    data[4] |= (msg->Und_Temp_Enable & 0x1) << 3;
+    data[4] |= (msg->Ovr_Temp_Enable & 0x1) << 4;
+    data[4] |= (msg->Direct_Enable & 0x1) << 5;
+    data[4] |= (msg->Discharge_Mode & 0x1) << 6;
+    data[5] |= (msg->Sim_BMS_Char_Curr_Req & 0xFF) << 0;
+}
+
 
 /* Messages with cycle time 10 ms */
 
@@ -897,25 +922,27 @@ void encode_M_Battery_Fault_Data(const M_Battery_Fault_Data_t* msg, uint8_t* dat
     data[0] |= (msg->Precharge_Fail_Perm & 0x1) << 3;
     data[0] |= (msg->Main_Connection_Err & 0x1) << 4;
     data[0] |= (msg->Dis_Connection_Err & 0x1) << 5;
-    data[0] |= (msg->Cell_Ovr_Voltage & 0x1) << 6;
-    data[0] |= (msg->Cell_Und_Voltage & 0x1) << 7;
-    data[1] |= (msg->Short_Circuit_Err & 0x1) << 0;
-    data[1] |= (msg->Short_Circuit_Perm & 0x1) << 1;
-    data[1] |= (msg->Over_Temp_Perm & 0x1) << 2;
-    data[1] |= (msg->PDU_Temp_Err & 0x1) << 3;
-    data[1] |= (msg->Chg_Ovr_Vol_Warn & 0x1) << 4;
-    data[1] |= (msg->Chg_Ovr_Vol_Err & 0x1) << 5;
-    data[1] |= (msg->Chg_Ovr_Vol_Perm & 0x1) << 6;
-    data[1] |= (msg->Chg_Und_Vol_Warn & 0x1) << 7;
-    data[2] |= (msg->Chg_OvrTemp_Warn & 0x1) << 0;
-    data[2] |= (msg->Dis_OvrTemp_Warn & 0x1) << 1;
-    data[2] |= (msg->Dis_OvrTemp_Err & 0x1) << 2;
-    data[2] |= (msg->Charge_CutOff & 0x1) << 3;
-    data[2] |= (msg->Dis_CutOff & 0x1) << 4;
-    data[2] |= (msg->Batt_TempRise_Perm & 0x1) << 5;
-    data[2] |= (msg->PDU_TempRise_Perm & 0x1) << 6;
-    data[2] |= (msg->Therm_RunAway_CutOFF & 0x1) << 7;
-    data[3] |= (msg->Ther_RunAway_Alert & 0x1) << 0;
+    data[0] |= (msg->Cell_Ovr_Voltage_Err & 0x1) << 6;
+    data[0] |= (msg->Cell_Und_Voltage_Err & 0x1) << 7;
+    data[1] |= (msg->Cell_Ovr_Voltage_Perm & 0x1) << 0;
+    data[1] |= (msg->Cell_Und_Voltage_Perm & 0x1) << 1;
+    data[1] |= (msg->Short_Circuit_Err & 0x1) << 2;
+    data[1] |= (msg->Short_Circuit_Perm & 0x1) << 3;
+    data[1] |= (msg->Over_Temp_Perm & 0x1) << 4;
+    data[1] |= (msg->PDU_Temp_Err & 0x1) << 5;
+    data[1] |= (msg->Chg_Ovr_Vol_Warn & 0x1) << 6;
+    data[1] |= (msg->Chg_Ovr_Vol_Err & 0x1) << 7;
+    data[2] |= (msg->Chg_Ovr_Vol_Perm & 0x1) << 0;
+    data[2] |= (msg->Chg_Und_Vol_Warn & 0x1) << 1;
+    data[2] |= (msg->Chg_OvrTemp_Warn & 0x1) << 2;
+    data[2] |= (msg->Dis_OvrTemp_Warn & 0x1) << 3;
+    data[2] |= (msg->Dis_OvrTemp_Err & 0x1) << 4;
+    data[2] |= (msg->Charge_CutOff & 0x1) << 5;
+    data[2] |= (msg->Dis_CutOff & 0x1) << 6;
+    data[2] |= (msg->Batt_TempRise_Perm & 0x1) << 7;
+    data[3] |= (msg->PDU_TempRise_Perm & 0x1) << 0;
+    data[3] |= (msg->Therm_RunAway_CutOFF & 0x1) << 1;
+    data[3] |= (msg->Ther_RunAway_Alert & 0x1) << 2;
 }
 
 /* S_Battery_Fault_Data */
@@ -931,23 +958,25 @@ void encode_S_Battery_Fault_Data(const S_Battery_Fault_Data_t* msg, uint8_t* dat
     data[0] |= (msg->Dis_Connection_Err & 0x1) << 5;
     data[0] |= (msg->Cell_Ovr_Voltage & 0x1) << 6;
     data[0] |= (msg->Cell_Und_Voltage & 0x1) << 7;
-    data[1] |= (msg->Short_Circuit_Err & 0x1) << 0;
-    data[1] |= (msg->Short_Circuit_Perm & 0x1) << 1;
-    data[1] |= (msg->Over_Temp_Perm & 0x1) << 2;
-    data[1] |= (msg->PDU_Temp_Err & 0x1) << 3;
-    data[1] |= (msg->Chg_Ovr_Vol_Warn & 0x1) << 4;
-    data[1] |= (msg->Chg_Ovr_Vol_Err & 0x1) << 5;
-    data[1] |= (msg->Chg_Ovr_Vol_Perm & 0x1) << 6;
-    data[1] |= (msg->Chg_Und_Vol_Warn & 0x1) << 7;
-    data[2] |= (msg->Chg_OvrTemp_Warn & 0x1) << 0;
-    data[2] |= (msg->Dis_OvrTemp_Warn & 0x1) << 1;
-    data[2] |= (msg->Dis_OvrTemp_Err & 0x1) << 2;
-    data[2] |= (msg->Charge_CutOff & 0x1) << 3;
-    data[2] |= (msg->Dis_CutOff & 0x1) << 4;
-    data[2] |= (msg->Batt_TempRise_Perm & 0x1) << 5;
-    data[2] |= (msg->PDU_TempRise_Perm & 0x1) << 6;
-    data[2] |= (msg->Therm_RunAway_CutOFF & 0x1) << 7;
-    data[3] |= (msg->Ther_RunAway_Alert & 0x1) << 0;
+    data[1] |= (msg->Cell_Ovr_Voltage_Perm & 0x1) << 0;
+    data[1] |= (msg->Cell_Und_Voltage_Perm & 0x1) << 1;
+    data[1] |= (msg->Short_Circuit_Err & 0x1) << 2;
+    data[1] |= (msg->Short_Circuit_Perm & 0x1) << 3;
+    data[1] |= (msg->Over_Temp_Perm & 0x1) << 4;
+    data[1] |= (msg->PDU_Temp_Err & 0x1) << 5;
+    data[1] |= (msg->Chg_Ovr_Vol_Warn & 0x1) << 6;
+    data[1] |= (msg->Chg_Ovr_Vol_Err & 0x1) << 7;
+    data[2] |= (msg->Chg_Ovr_Vol_Perm & 0x1) << 0;
+    data[2] |= (msg->Chg_Und_Vol_Warn & 0x1) << 1;
+    data[2] |= (msg->Chg_OvrTemp_Warn & 0x1) << 2;
+    data[2] |= (msg->Dis_OvrTemp_Warn & 0x1) << 3;
+    data[2] |= (msg->Dis_OvrTemp_Err & 0x1) << 4;
+    data[2] |= (msg->Charge_CutOff & 0x1) << 5;
+    data[2] |= (msg->Dis_CutOff & 0x1) << 6;
+    data[2] |= (msg->Batt_TempRise_Perm & 0x1) << 7;
+    data[3] |= (msg->PDU_TempRise_Perm & 0x1) << 0;
+    data[3] |= (msg->Therm_RunAway_CutOFF & 0x1) << 1;
+    data[3] |= (msg->Ther_RunAway_Alert & 0x1) << 2;
 }
 
 

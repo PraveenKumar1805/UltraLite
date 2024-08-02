@@ -64,6 +64,7 @@
 #define MCU_ODO_DATA_ID 0x302
 #define MCU_TEMP_DATA_ID 0x303
 #define CHARGER_DATA_ID 0x400
+#define SEND_VCU_CMD_ID 0x580
 
 typedef struct {
     uint16_t SoC : 16;
@@ -245,8 +246,10 @@ typedef struct {
     uint8_t Precharge_Fail_Perm : 1;
     uint8_t Main_Connection_Err : 1;
     uint8_t Dis_Connection_Err : 1;
-    uint8_t Cell_Ovr_Voltage : 1;
-    uint8_t Cell_Und_Voltage : 1;
+    uint8_t Cell_Ovr_Voltage_Err : 1;
+    uint8_t Cell_Und_Voltage_Err : 1;
+    uint8_t Cell_Ovr_Voltage_Perm : 1;
+    uint8_t Cell_Und_Voltage_Perm : 1;
     uint8_t Short_Circuit_Err : 1;
     uint8_t Short_Circuit_Perm : 1;
     uint8_t Over_Temp_Perm : 1;
@@ -473,6 +476,8 @@ typedef struct {
     uint8_t Dis_Connection_Err : 1;
     uint8_t Cell_Ovr_Voltage : 1;
     uint8_t Cell_Und_Voltage : 1;
+    uint8_t Cell_Ovr_Voltage_Perm : 1;
+    uint8_t Cell_Und_Voltage_Perm : 1;
     uint8_t Short_Circuit_Err : 1;
     uint8_t Short_Circuit_Perm : 1;
     uint8_t Over_Temp_Perm : 1;
@@ -567,6 +572,31 @@ typedef struct {
     uint8_t Charger_CAN : 1;
 } Charger_Data_t;
 
+typedef struct {
+    uint8_t VCU_Wakup_Req : 2;
+    uint8_t Charge_Connected : 1;
+    uint8_t Diagnostic_Flg : 1;
+    uint8_t BMS_WakUp_Req : 2;
+    uint8_t Vehicle_Mode_L2 : 2;
+    uint8_t Ign : 1;
+    uint8_t Vehicle_Mode_L3 : 2;
+    uint8_t Current_Dir : 1;
+    uint8_t Simulation_Enable : 1;
+    uint8_t Cell_Fault_UV : 1;
+    uint8_t Slm_Charger_Volt_Enable_Flag : 1;
+    uint8_t Cell_Fault_OV : 1;
+    uint16_t Current_Sim_Value : 16;
+    uint8_t Voltage_Fault_Enable : 1;
+    uint8_t Sim_Charger_Current_Req_Flg : 1;
+    uint8_t Temp_Fault_Enable : 1;
+    uint8_t Und_Temp_Enable : 1;
+    uint8_t Ovr_Temp_Enable : 1;
+    uint8_t Direct_Enable : 1;
+    uint8_t Discharge_Mode : 1;
+    uint8_t Sim_BMS_Char_Curr_Req : 8;
+    uint16_t Sim_Charger_Volt_Req : 10;
+} Send_VCU_Cmd_t;
+
 void encode_M_Data(const M_Data_t* msg, uint8_t* data);
 void encode_M_Battery_Voltage_Data1(const M_Battery_Voltage_Data1_t* msg, uint8_t* data);
 void encode_M_Battery_Voltage_Data2(const M_Battery_Voltage_Data2_t* msg, uint8_t* data);
@@ -628,6 +658,7 @@ void encode_MCU_Data(const MCU_Data_t* msg, uint8_t* data);
 void encode_MCU_Odo_Data(const MCU_Odo_Data_t* msg, uint8_t* data);
 void encode_MCU_Temp_Data(const MCU_Temp_Data_t* msg, uint8_t* data);
 void encode_Charger_Data(const Charger_Data_t* msg, uint8_t* data);
+void encode_Send_VCU_Cmd(const Send_VCU_Cmd_t* msg, uint8_t* data);
 
 void decode_M_Data(const uint8_t* data, M_Data_t* msg);
 void decode_M_Battery_Voltage_Data1(const uint8_t* data, M_Battery_Voltage_Data1_t* msg);
@@ -690,5 +721,6 @@ void decode_MCU_Data(const uint8_t* data, MCU_Data_t* msg);
 void decode_MCU_Odo_Data(const uint8_t* data, MCU_Odo_Data_t* msg);
 void decode_MCU_Temp_Data(const uint8_t* data, MCU_Temp_Data_t* msg);
 void decode_Charger_Data(const uint8_t* data, Charger_Data_t* msg);
+void decode_Send_VCU_Cmd(const uint8_t* data, Send_VCU_Cmd_t* msg);
 
 #endif // CAN_MESSAGES_H
